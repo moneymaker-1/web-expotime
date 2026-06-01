@@ -4,10 +4,12 @@ import type { NextConfig } from 'next';
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ['sanity', '@sanity/client', 'next-sanity'],
   images: {
     remotePatterns: [
       { hostname: 'images.unsplash.com' },
       { hostname: 'plus.unsplash.com' },
+      { protocol: 'https', hostname: 'cdn.sanity.io' },
     ],
   },
   async headers() {
