@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { Menu, X, Phone, ChevronDown, MessageCircle } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -77,13 +78,7 @@ export default function Header() {
 
       {/* Main nav */}
       <div className="container-custom" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.875rem 1.5rem' }}>
-        <Link href={`/${locale}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
-          <div style={{ width: 42, height: 42, background: 'linear-gradient(135deg, #f3c716, #d4a800)', borderRadius: '0.625rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '1.3rem', color: '#0f1e2d', boxShadow: '0 4px 15px rgba(243,199,22,0.25)', fontFamily: "'Poppins', sans-serif" }}>E</div>
-          <div>
-            <div style={{ fontWeight: 800, fontSize: '1.1rem', color: '#F9FAFB', lineHeight: 1, letterSpacing: '-0.01em' }}>{isRtl ? 'إكسبو تايم' : 'Expo Time'}</div>
-            <div style={{ fontSize: '0.6rem', color: '#62b1b6', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '2px' }}>{isRtl ? 'منظم الفعاليات' : 'Event Organizer'}</div>
-          </div>
-        </Link>
+        <Logo locale={locale} size="md" />
 
         <nav style={{ display: 'flex', alignItems: 'center', gap: '0.125rem' }} className="hidden-mobile">
           {navLinks.map((link) => (

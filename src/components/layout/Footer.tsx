@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { Phone, Mail, MapPin, Instagram, Twitter, Linkedin, Youtube, MessageCircle, Smartphone } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   const locale = useLocale();
@@ -51,13 +52,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Link href={`/${locale}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.875rem', marginBottom: '1.25rem' }}>
-              <div style={{ width: 44, height: 44, background: 'linear-gradient(135deg, #f3c716, #d4a800)', borderRadius: '0.625rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '1.3rem', color: '#0f1e2d' }}>E</div>
-              <div>
-                <div style={{ fontWeight: 800, fontSize: '1.1rem', color: '#F9FAFB' }}>{isRtl ? 'إكسبو تايم' : 'Expo Time'}</div>
-                <div style={{ fontSize: '0.6rem', color: '#62b1b6', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{isRtl ? 'منظم الفعاليات' : 'Event Organizer'}</div>
-              </div>
-            </Link>
+            <div style={{ marginBottom: '1.25rem' }}>
+              <Logo locale={locale} size="sm" />
+            </div>
             <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: 1.75, marginBottom: '1.5rem' }}>
               {isRtl
                 ? 'شريكك الاستراتيجي لتصميم وتنفيذ أجنحة المعارض الاحترافية في المملكة العربية السعودية منذ 2005.'
