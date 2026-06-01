@@ -17,15 +17,15 @@ interface ServicePageProps {
   faqsAr: { q: string; a: string }[];
   faqsEn: { q: string; a: string }[];
   image: string;
-  relatedServicesAr: string[];
-  relatedServicesEn: string[];
+  relatedServicesAr?: string[];
+  relatedServicesEn?: string[];
   schemaType?: string;
 }
 
 export default function ServicePageTemplate({
   locale, titleAr, titleEn, subtitleAr, subtitleEn,
   descAr, descEn, featuresAr, featuresEn,
-  faqsAr, faqsEn, image, relatedServicesAr, relatedServicesEn, schemaType = 'Service',
+  faqsAr, faqsEn, image, schemaType = 'Service',
 }: ServicePageProps) {
   const isRtl = locale === 'ar';
   const title = isRtl ? titleAr : titleEn;
