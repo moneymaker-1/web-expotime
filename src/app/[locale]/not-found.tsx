@@ -11,11 +11,11 @@ export default function LocaleNotFound() {
         minHeight: '100vh',
         textAlign: 'center',
         padding: '2rem',
-        backgroundColor: '#0A0E1A',
+        backgroundColor: '#0f1e2d',
         color: '#F9FAFB',
       }}
     >
-      <h1 style={{ fontSize: '6rem', fontWeight: 900, color: '#C9A84C', margin: 0, lineHeight: 1 }}>
+      <h1 style={{ fontSize: '6rem', fontWeight: 900, color: '#f3c716', margin: 0, lineHeight: 1 }}>
         404
       </h1>
       <p style={{ fontSize: '1.5rem', marginBottom: '0.5rem', marginTop: '1rem' }}>
@@ -28,8 +28,8 @@ export default function LocaleNotFound() {
         href="/ar"
         style={{
           padding: '0.875rem 2.5rem',
-          background: 'linear-gradient(135deg, #C9A84C, #B8960A)',
-          color: '#0A0E1A',
+          background: 'linear-gradient(135deg, #f3c716, #d4a800)',
+          color: '#0f1e2d',
           borderRadius: '0.625rem',
           fontWeight: 800,
           textDecoration: 'none',

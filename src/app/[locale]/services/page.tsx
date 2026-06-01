@@ -31,7 +31,7 @@ export default async function ServicesPage({ params }: Props) {
         {/* Hero */}
         <section
           style={{
-            background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)',
+            background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)',
             paddingTop: '8rem',
             paddingBottom: '4rem',
           }}
@@ -52,7 +52,7 @@ export default async function ServicesPage({ params }: Props) {
         </section>
 
         {/* Services grid */}
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div
               style={{
@@ -94,7 +94,7 @@ export default async function ServicesPage({ params }: Props) {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.375rem',
-                        color: '#C9A84C',
+                        color: '#f3c716',
                         fontSize: '0.875rem',
                         fontWeight: 700,
                       }}
@@ -110,7 +110,7 @@ export default async function ServicesPage({ params }: Props) {
         </section>
 
         {/* Why choose us */}
-        <section className="section-padding" style={{ backgroundColor: '#060A14' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0a1520' }}>
           <div className="container-custom">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 className="section-title">
@@ -169,12 +169,12 @@ export default async function ServicesPage({ params }: Props) {
         </section>
 
         {/* CTA */}
-        <section style={{ padding: '4rem 0', backgroundColor: '#0A0E1A' }}>
+        <section style={{ padding: '4rem 0', backgroundColor: '#0f1e2d' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
             <div
               style={{
-                background: 'rgba(201,168,76,0.06)',
-                border: '1px solid rgba(201,168,76,0.2)',
+                background: 'rgba(243,199,22,0.06)',
+                border: '1px solid rgba(243,199,22,0.2)',
                 borderRadius: '1.5rem',
                 padding: '3.5rem 2rem',
               }}
@@ -201,8 +201,8 @@ export default async function ServicesPage({ params }: Props) {
                 style={{
                   display: 'inline-block',
                   padding: '1rem 2.5rem',
-                  background: 'linear-gradient(135deg, #C9A84C, #B8960A)',
-                  color: '#0A0E1A',
+                  background: 'linear-gradient(135deg, #f3c716, #d4a800)',
+                  color: '#0f1e2d',
                   fontWeight: 800,
                   fontSize: '1rem',
                   borderRadius: '0.625rem',

@@ -26,7 +26,7 @@ export default async function PortfolioPage({ params }: Props) {
     <>
       <Header />
       <main>
-        <section style={{ background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
             <h1 className="section-title" style={{ marginBottom: '1rem' }}>
               {isRtl ? 'أعمالنا' : 'Our Portfolio'}
@@ -37,16 +37,16 @@ export default async function PortfolioPage({ params }: Props) {
           </div>
         </section>
 
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.75rem' }}>
               {portfolioProjects.map((p) => (
                 <div key={p.id} className="card" style={{ overflow: 'hidden' }}>
-                  <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden', background: '#111827' }}>
+                  <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden', background: '#162534' }}>
                     <Image src={p.image} alt={isRtl ? p.titleAr : p.titleEn} fill style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }} />
                     <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7))' }} />
                     <div style={{ position: 'absolute', top: '1rem', [isRtl ? 'right' : 'left']: '1rem' }}>
-                      <span style={{ background: 'rgba(201,168,76,0.92)', color: '#0A0E1A', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700 }}>
+                      <span style={{ background: 'rgba(243,199,22,0.92)', color: '#0f1e2d', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700 }}>
                         {isRtl ? p.categoryAr : p.categoryEn}
                       </span>
                     </div>
@@ -56,7 +56,7 @@ export default async function PortfolioPage({ params }: Props) {
                       {isRtl ? p.titleAr : p.titleEn}
                     </h3>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ color: '#C9A84C', fontWeight: 600, fontSize: '0.85rem' }}>{p.client}</span>
+                      <span style={{ color: '#f3c716', fontWeight: 600, fontSize: '0.85rem' }}>{p.client}</span>
                       <span style={{ color: '#6B7280', fontSize: '0.8rem' }}>{p.area} • {p.year}</span>
                     </div>
                   </div>
@@ -65,7 +65,7 @@ export default async function PortfolioPage({ params }: Props) {
             </div>
 
             {/* CTA */}
-            <div style={{ textAlign: 'center', marginTop: '4rem', padding: '3rem', background: 'rgba(201,168,76,0.06)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '1.25rem' }}>
+            <div style={{ textAlign: 'center', marginTop: '4rem', padding: '3rem', background: 'rgba(243,199,22,0.06)', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem' }}>
               <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '1rem' }}>
                 {isRtl ? 'هل أنت مستعد لإنشاء جناح معرض استثنائي؟' : 'Ready to Create an Extraordinary Exhibition Stand?'}
               </h2>
@@ -75,8 +75,8 @@ export default async function PortfolioPage({ params }: Props) {
               <Link href={`/${locale}/contact`} style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                 padding: '0.875rem 2.5rem',
-                background: 'linear-gradient(135deg, #C9A84C, #B8960A)',
-                color: '#0A0E1A', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none',
+                background: 'linear-gradient(135deg, #f3c716, #d4a800)',
+                color: '#0f1e2d', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none',
               }}>
                 {isRtl ? 'احصل على عرض سعر' : 'Get a Quote'}
               </Link>

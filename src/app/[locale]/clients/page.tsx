@@ -22,18 +22,18 @@ export default async function ClientsPage({ params }: Props) {
     <>
       <Header />
       <main>
-        <section style={{ background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
             <h1 className="section-title" style={{ marginBottom: '1rem' }}>{isRtl ? 'عملاؤنا' : 'Our Clients'}</h1>
             <p className="section-subtitle">{isRtl ? 'نفخر بثقة أبرز الشركات والجهات في المملكة' : 'We are proud to serve Saudi Arabia\'s most prominent companies and institutions'}</p>
           </div>
         </section>
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1.25rem' }}>
               {clients.map((c) => (
                 <div key={c.nameEn} className="card" style={{ padding: '2rem', textAlign: 'center' }}>
-                  <div style={{ width: 60, height: 60, borderRadius: '0.75rem', background: 'linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05))', border: '1px solid rgba(201,168,76,0.2)', margin: '0 auto 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.75rem' }}>🏢</div>
+                  <div style={{ width: 60, height: 60, borderRadius: '0.75rem', background: 'linear-gradient(135deg, rgba(243,199,22,0.15), rgba(243,199,22,0.05))', border: '1px solid rgba(243,199,22,0.2)', margin: '0 auto 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.75rem' }}>🏢</div>
                   <div style={{ fontWeight: 700, color: '#F9FAFB', fontSize: '1rem', marginBottom: '0.375rem' }}>{isRtl ? c.nameAr : c.nameEn}</div>
                   <div style={{ fontSize: '0.75rem', color: '#6B7280', textTransform: 'capitalize' }}>{c.sector}</div>
                 </div>
@@ -46,8 +46,8 @@ export default async function ClientsPage({ params }: Props) {
               </p>
               <Link href={`/${locale}/contact`} style={{
                 display: 'inline-block', padding: '0.875rem 2.5rem',
-                background: 'linear-gradient(135deg, #C9A84C, #B8960A)',
-                color: '#0A0E1A', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none',
+                background: 'linear-gradient(135deg, #f3c716, #d4a800)',
+                color: '#0f1e2d', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none',
               }}>
                 {isRtl ? 'انضم إلى قائمة عملائنا' : 'Join Our Client List'}
               </Link>

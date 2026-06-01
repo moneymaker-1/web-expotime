@@ -27,22 +27,22 @@ export default async function BlogPage({ params }: Props) {
     <>
       <Header />
       <main>
-        <section style={{ background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
             <h1 className="section-title" style={{ marginBottom: '1rem' }}>{isRtl ? 'المدونة' : 'Blog'}</h1>
             <p className="section-subtitle">{isRtl ? 'مقالات ونصائح خبراء صناعة المعارض' : 'Articles and expert tips from the exhibition industry'}</p>
           </div>
         </section>
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.75rem' }}>
               {blogPosts.map((post) => (
                 <Link key={post.slug} href={`/${locale}/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                   <div className="card" style={{ overflow: 'hidden', height: '100%' }}>
-                    <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden', background: '#111827' }}>
+                    <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden', background: '#162534' }}>
                       <Image src={post.image} alt={isRtl ? post.titleAr : post.titleEn} fill style={{ objectFit: 'cover' }} />
                       <div style={{ position: 'absolute', top: '1rem', [isRtl ? 'right' : 'left']: '1rem' }}>
-                        <span style={{ background: 'rgba(201,168,76,0.9)', color: '#0A0E1A', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700 }}>
+                        <span style={{ background: 'rgba(243,199,22,0.9)', color: '#0f1e2d', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700 }}>
                           {isRtl ? post.categoryAr : post.categoryEn}
                         </span>
                       </div>
@@ -58,7 +58,7 @@ export default async function BlogPage({ params }: Props) {
                       <p style={{ color: '#9CA3AF', fontSize: '0.875rem', lineHeight: 1.7 }}>
                         {isRtl ? post.excerptAr : post.excerptEn}
                       </p>
-                      <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#C9A84C', fontSize: '0.875rem', fontWeight: 600 }}>
+                      <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#f3c716', fontSize: '0.875rem', fontWeight: 600 }}>
                         {isRtl ? 'اقرأ المزيد' : 'Read More'} <ArrowRight size={14} />
                       </div>
                     </div>
