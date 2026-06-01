@@ -1,0 +1,9 @@
+<svg viewBox="0 0 420 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- expotime wordmark with yellow checkmark X -->
+  <text x="6" y="96" font-family="Poppins, sans-serif" font-weight="800" font-size="96" fill="#293d50" letter-spacing="-2">e</text>
+  <!-- Yellow checkmark replacing "x" -->
+  <polyline points="88,30 118,90 168,20" stroke="#f3c716" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="156" y="96" font-family="Poppins, sans-serif" font-weight="800" font-size="96" fill="#293d50" letter-spacing="-2">potime</text>
+  <!-- Event Organizer tagline -->
+  <text x="210" y="120" font-family="Poppins, sans-serif" font-weight="500" font-size="20" fill="#f3c716" text-anchor="middle" letter-spacing="2">Event Organizer</text>
+</svg>
