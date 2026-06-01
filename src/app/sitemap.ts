@@ -1,65 +1,67 @@
-import { siteUrl } from "@/lib/constants";
-import { basehub } from "basehub";
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next';
 
-export const revalidate = 1800; // 30 minutes - adjust as needed
+const baseUrl = 'https://expo-time.co';
+const locales = ['ar', 'en'];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const data = await basehub().query({
-    site: {
-      pages: {
-        items: {
-          pathname: true,
-        },
-      },
-      blog: {
-        posts: {
-          items: {
-            _slug: true,
-          },
-        },
-      },
-      changelog: {
-        posts: {
-          items: {
-            _slug: true,
-          },
-        },
-      },
-    },
-  });
+const mainPages = [
+  '',
+  '/about',
+  '/services',
+  '/portfolio',
+  '/projects',
+  '/industries',
+  '/clients',
+  '/blog',
+  '/news',
+  '/careers',
+  '/contact',
+];
 
-  let index = 1;
-  const formattedPages = data.site.pages.items.map(
-    (page) =>
-      ({
-        url: `${siteUrl}${page.pathname}`,
+const servicePages = [
+  '/exhibition-stand-design',
+  '/exhibition-booth-fabrication',
+  '/exhibition-contractor',
+  '/conference-management',
+  '/event-management',
+  '/event-production',
+  '/exhibition-services',
+  '/custom-booths',
+  '/modular-booths',
+  '/temporary-structures',
+  '/brand-activations',
+];
+
+const cityPages = [
+  '/riyadh',
+  '/jeddah',
+  '/dammam',
+  '/khobar',
+  '/makkah',
+  '/madinah',
+  '/neom',
+  '/eastern-province',
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const entries: MetadataRoute.Sitemap = [];
+
+  const allPages = [...mainPages, ...servicePages, ...cityPages];
+
+  for (const page of allPages) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${baseUrl}/${locale}${page}`,
         lastModified: new Date(),
-        changeFrequency: "daily",
-        priority: index++,
-      }) satisfies MetadataRoute.Sitemap[number],
-  );
+        changeFrequency: page === '' ? 'daily' : page.includes('blog') ? 'weekly' : 'monthly',
+        priority: page === '' ? 1.0 : page.includes('service') || page.includes('exhibition') ? 0.9 : 0.8,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${baseUrl}/${l}${page}`])
+          ),
+        },
+      });
+    }
+  }
 
-  const formattedBlogPosts = data.site.blog.posts.items.map(
-    (post) =>
-      ({
-        url: `${siteUrl}/blog/${post._slug}`,
-        lastModified: new Date(),
-        changeFrequency: "daily",
-        priority: index++,
-      }) satisfies MetadataRoute.Sitemap[number],
-  );
-
-  const formattedChangelogPosts = data.site.changelog.posts.items.map(
-    (post) =>
-      ({
-        url: `${siteUrl}/changelog/${post._slug}`,
-        lastModified: new Date(),
-        changeFrequency: "daily",
-        priority: index++,
-      }) satisfies MetadataRoute.Sitemap[number],
-  );
-
-  const routes = [...formattedPages, ...formattedBlogPosts, ...formattedChangelogPosts];
-  return routes;
+  return entries;
 }

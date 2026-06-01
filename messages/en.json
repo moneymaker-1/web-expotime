@@ -1,0 +1,180 @@
+{
+  "site": {
+    "name": "Expo Time",
+    "tagline": "We craft excellence at every exhibition",
+    "description": "Expo Time is Saudi Arabia's premier exhibition stand design and fabrication company. We deliver world-class custom and modular exhibition stands, event management, and brand activation solutions.",
+    "phone": "+966 11 234 5678",
+    "email": "info@expo-time.co",
+    "address": "Riyadh, Saudi Arabia"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "projects": "Projects",
+    "industries": "Industries",
+    "clients": "Clients",
+    "blog": "Blog",
+    "news": "News",
+    "careers": "Careers",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Saudi Arabia's Trusted Exhibition Partner",
+    "title": "We Craft Excellence",
+    "titleHighlight": "At Every Exhibition",
+    "subtitle": "From Riyadh to NEOM — we design and build extraordinary exhibition stands that reflect your brand identity and attract visitors",
+    "cta": "Get a Free Quote",
+    "ctaSecondary": "View Our Work",
+    "scrollDown": "Discover More"
+  },
+  "stats": {
+    "projects": "Completed Projects",
+    "clients": "Satisfied Clients",
+    "experience": "Years Experience",
+    "exhibitions": "International Exhibitions"
+  },
+  "services": {
+    "title": "Our Comprehensive Services",
+    "subtitle": "Complete exhibition stand and event solutions across Saudi Arabia",
+    "standDesign": {
+      "title": "Exhibition Stand Design",
+      "description": "We design extraordinary exhibition stands that reflect your brand identity and attract visitors with professional 3D visualizations"
+    },
+    "customBooths": {
+      "title": "Custom Exhibition Booths",
+      "description": "Bespoke booths designed specifically to meet your requirements with the highest quality standards in execution and finishing"
+    },
+    "modularBooths": {
+      "title": "Modular Booths",
+      "description": "Flexible and scalable solutions that deliver the best value for participating in multiple exhibitions"
+    },
+    "eventManagement": {
+      "title": "Event Management",
+      "description": "Complete event management from planning to execution with a specialized team and extensive experience"
+    },
+    "conferenceManagement": {
+      "title": "Conference Management",
+      "description": "World-class conference and forum organization with integrated audio-visual solutions"
+    },
+    "brandActivations": {
+      "title": "Brand Activations",
+      "description": "Innovative interactive experiences that enhance your brand presence and create unforgettable impressions"
+    },
+    "temporaryStructures": {
+      "title": "Temporary Structures",
+      "description": "High-quality temporary structures for outdoor exhibitions and large-scale events"
+    },
+    "eventProduction": {
+      "title": "Event Production",
+      "description": "Comprehensive event production including sound, lighting, décor, and logistics management"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "20 Years of Excellence in the Exhibition Industry",
+    "description": "Since 2005, Expo Time has been delivering comprehensive exhibition stand and event solutions across Saudi Arabia. With over 20 years of experience, we are proud to have served over 200 clients across various industries.",
+    "mission": "Our Mission",
+    "missionText": "To be the premier strategic partner for our clients in the exhibition industry, delivering creative and innovative solutions that strengthen their presence in local and international markets.",
+    "vision": "Our Vision",
+    "visionText": "To be the leading company in exhibition stand design and fabrication in the Middle East and North Africa, driven by innovation, quality, and sustainability.",
+    "values": "Our Values"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Explore our distinguished projects at Saudi Arabia's most prominent exhibitions",
+    "viewAll": "View All Projects",
+    "viewProject": "View Project"
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "We are proud to serve Saudi Arabia's most prominent companies and institutions"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real testimonials from our valued clients"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Start your project with us today — our team is ready to help",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "company": "Company Name",
+    "service": "Service Required",
+    "message": "Your Message",
+    "send": "Send Request",
+    "success": "Your request has been sent successfully! We will contact you within 24 hours.",
+    "address": "Address",
+    "addressValue": "King Fahd Road, Riyadh 12271, Saudi Arabia",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "description": "The strategic partner for exhibition stand design and event solutions across Saudi Arabia.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "cities": "Our Cities",
+    "contact": "Contact Us",
+    "rights": "All Rights Reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "cta": {
+    "title": "Ready for an Extraordinary Exhibition Stand?",
+    "subtitle": "Contact us now and get a free consultation and quote within 24 hours",
+    "button": "Get a Free Quote Now",
+    "buttonSecondary": "Call Us"
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Extensive expertise serving various economic sectors",
+    "tech": "Technology & Innovation",
+    "health": "Healthcare",
+    "construction": "Construction & Real Estate",
+    "food": "Food & Hospitality",
+    "auto": "Automotive",
+    "finance": "Finance & Business",
+    "energy": "Energy & Environment",
+    "education": "Education & Training",
+    "retail": "Retail & Fashion",
+    "government": "Government Sector"
+  },
+  "cities": {
+    "title": "We Serve All Saudi Cities",
+    "subtitle": "Strong presence in Saudi Arabia's key cities",
+    "riyadh": "Riyadh",
+    "jeddah": "Jeddah",
+    "dammam": "Dammam",
+    "khobar": "Khobar",
+    "makkah": "Makkah",
+    "madinah": "Madinah",
+    "neom": "NEOM",
+    "eastern": "Eastern Province"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles and expert tips from Saudi Arabia's exhibition industry",
+    "readMore": "Read More",
+    "recentPosts": "Recent Posts",
+    "categories": "Categories"
+  },
+  "careers": {
+    "title": "Join Our Team",
+    "subtitle": "We are always looking for exceptional talent to join the Expo Time team",
+    "openPositions": "Open Positions",
+    "apply": "Apply Now",
+    "noPositions": "No current openings, but you can send your CV"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions about our services"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist.",
+    "back": "Back to Home"
+  }
+}
