@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -7,7 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { portfolioProjects, clients, testimonials, services, faqs } from '@/lib/data';
 import { generatePageMetadata } from '@/lib/seo';
-import { CheckCircle, ArrowRight, Star, Phone, MessageSquare, Award, Users, Clock, Globe } from 'lucide-react';
+import { ArrowRight, Star, Phone, MessageSquare, Award, Users, Clock, Globe } from 'lucide-react';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -360,7 +359,6 @@ function TestimonialsSection({ locale }: { locale: string }) {
 
 function FAQSection({ locale }: { locale: string }) {
   const t = useTranslations('faq');
-  const isRtl = locale === 'ar';
   const faqList = faqs[locale as 'ar' | 'en'] || faqs.ar;
 
   return (

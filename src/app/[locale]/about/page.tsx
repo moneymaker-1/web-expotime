@@ -1,11 +1,9 @@
-import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { generatePageMetadata } from '@/lib/seo';
-import { CheckCircle, Target, Eye, Heart, Award, Users, Clock, Globe } from 'lucide-react';
+import { CheckCircle, Target, Eye, Award, Users, Clock, Globe } from 'lucide-react';
 
 type Props = { params: Promise<{ locale: string }> };
 
