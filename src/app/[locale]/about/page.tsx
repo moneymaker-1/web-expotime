@@ -42,7 +42,7 @@ export default async function AboutPage({ params }: Props) {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)', paddingTop: '8rem', paddingBottom: '5rem' }}>
+        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '5rem' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
             <div className="badge" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>
               {isRtl ? 'قصتنا' : 'Our Story'}
@@ -59,7 +59,7 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Story */}
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
               <div style={{ order: isRtl ? 2 : 1 }}>
@@ -83,13 +83,13 @@ export default async function AboutPage({ params }: Props) {
                   isRtl ? 'خدمة شاملة من التصميم إلى التركيب' : 'Comprehensive service from design to installation',
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                    <CheckCircle size={18} style={{ color: '#C9A84C', flexShrink: 0 }} />
+                    <CheckCircle size={18} style={{ color: '#f3c716', flexShrink: 0 }} />
                     <span style={{ color: '#D1D5DB', fontSize: '0.9rem' }}>{item}</span>
                   </div>
                 ))}
               </div>
               <div style={{ order: isRtl ? 1 : 2 }}>
-                <div style={{ borderRadius: '1.25rem', overflow: 'hidden', border: '1px solid rgba(201,168,76,0.2)', aspectRatio: '4/3', position: 'relative' }}>
+                <div style={{ borderRadius: '1.25rem', overflow: 'hidden', border: '1px solid rgba(243,199,22,0.2)', aspectRatio: '4/3', position: 'relative' }}>
                   <Image src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80" alt="About Expo Time" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Stats */}
-        <section style={{ backgroundColor: '#060A14', padding: '4rem 0', borderTop: '1px solid rgba(201,168,76,0.1)', borderBottom: '1px solid rgba(201,168,76,0.1)' }}>
+        <section style={{ backgroundColor: '#0a1520', padding: '4rem 0', borderTop: '1px solid rgba(243,199,22,0.1)', borderBottom: '1px solid rgba(243,199,22,0.1)' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
               {[
@@ -109,8 +109,8 @@ export default async function AboutPage({ params }: Props) {
                 { num: '15+', labelAr: 'معرض دولي', labelEn: 'International Exhibitions', Icon: Globe },
               ].map(({ num, labelAr, labelEn, Icon }) => (
                 <div key={num} style={{ textAlign: 'center', padding: '1.5rem' }}>
-                  <Icon size={28} style={{ color: '#C9A84C', margin: '0 auto 0.75rem' }} />
-                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#C9A84C' }}>{num}</div>
+                  <Icon size={28} style={{ color: '#f3c716', margin: '0 auto 0.75rem' }} />
+                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f3c716' }}>{num}</div>
                   <div style={{ color: '#9CA3AF', fontSize: '0.9rem', marginTop: '0.5rem' }}>{isRtl ? labelAr : labelEn}</div>
                 </div>
               ))}
@@ -119,11 +119,11 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Mission & Vision */}
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-              <div style={{ background: '#111827', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
-                <Target size={36} style={{ color: '#C9A84C', marginBottom: '1.25rem' }} />
+              <div style={{ background: '#162534', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
+                <Target size={36} style={{ color: '#f3c716', marginBottom: '1.25rem' }} />
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '1rem' }}>
                   {isRtl ? 'رسالتنا' : 'Our Mission'}
                 </h3>
@@ -133,8 +133,8 @@ export default async function AboutPage({ params }: Props) {
                     : 'To be the premier strategic partner for our clients in the exhibition industry, delivering creative and innovative solutions that strengthen their presence in local and international markets and achieve their marketing goals.'}
                 </p>
               </div>
-              <div style={{ background: '#111827', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
-                <Eye size={36} style={{ color: '#C9A84C', marginBottom: '1.25rem' }} />
+              <div style={{ background: '#162534', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
+                <Eye size={36} style={{ color: '#f3c716', marginBottom: '1.25rem' }} />
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '1rem' }}>
                   {isRtl ? 'رؤيتنا' : 'Our Vision'}
                 </h3>
@@ -150,7 +150,7 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Values */}
-        <section className="section-padding" style={{ backgroundColor: '#060A14' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0a1520' }}>
           <div className="container-custom">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 className="section-title">{isRtl ? 'قيمنا' : 'Our Values'}</h2>
@@ -168,7 +168,7 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Team */}
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 className="section-title">{isRtl ? 'فريقنا القيادي' : 'Our Leadership Team'}</h2>
@@ -176,9 +176,9 @@ export default async function AboutPage({ params }: Props) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1.5rem' }}>
               {team.map((m) => (
                 <div key={m.nameEn} className="card" style={{ padding: '2rem', textAlign: 'center' }}>
-                  <div style={{ width: 80, height: 80, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(201,168,76,0.2), rgba(201,168,76,0.05))', border: '2px solid rgba(201,168,76,0.3)', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>👤</div>
+                  <div style={{ width: 80, height: 80, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(243,199,22,0.2), rgba(243,199,22,0.05))', border: '2px solid rgba(243,199,22,0.3)', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>👤</div>
                   <h3 style={{ fontWeight: 700, color: '#F9FAFB', fontSize: '1rem' }}>{isRtl ? m.nameAr : m.nameEn}</h3>
-                  <p style={{ color: '#C9A84C', fontSize: '0.8rem', marginTop: '0.375rem' }}>{isRtl ? m.roleAr : m.roleEn}</p>
+                  <p style={{ color: '#f3c716', fontSize: '0.8rem', marginTop: '0.375rem' }}>{isRtl ? m.roleAr : m.roleEn}</p>
                 </div>
               ))}
             </div>

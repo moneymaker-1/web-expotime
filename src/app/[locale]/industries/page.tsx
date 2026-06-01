@@ -23,13 +23,13 @@ export default async function IndustriesPage({ params }: Props) {
     <>
       <Header />
       <main>
-        <section style={{ background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
             <h1 className="section-title" style={{ marginBottom: '1rem' }}>{isRtl ? 'القطاعات التي نخدمها' : 'Industries We Serve'}</h1>
             <p className="section-subtitle">{isRtl ? 'خبرة عميقة في خدمة جميع القطاعات الاقتصادية' : 'Deep expertise serving all economic sectors'}</p>
           </div>
         </section>
-        <section className="section-padding" style={{ backgroundColor: '#0A0E1A' }}>
+        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
               {industries.map((ind) => (
@@ -43,7 +43,7 @@ export default async function IndustriesPage({ params }: Props) {
                       ? `نقدم حلول أجنحة معارض متخصصة لقطاع ${ind.nameAr} في المملكة العربية السعودية`
                       : `We deliver specialized exhibition stand solutions for the ${ind.nameEn} sector in Saudi Arabia`}
                   </p>
-                  <Link href={`/${locale}/contact`} style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#C9A84C', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
+                  <Link href={`/${locale}/contact`} style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#f3c716', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
                     {isRtl ? 'احصل على عرض سعر' : 'Get a Quote'} <ArrowRight size={14} />
                   </Link>
                 </div>

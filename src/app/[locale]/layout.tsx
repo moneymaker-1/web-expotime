@@ -15,27 +15,16 @@ export const metadata: Metadata = {
   keywords: ['تصميم أجنحة معارض', 'exhibition stand design', 'Saudi Arabia', 'الرياض', 'Riyadh'],
   authors: [{ name: 'Expo Time' }],
   creator: 'Expo Time',
-  openGraph: {
-    type: 'website',
-    url: 'https://expo-time.co',
-    siteName: 'Expo Time',
-  },
+  openGraph: { type: 'website', url: 'https://expo-time.co', siteName: 'Expo Time' },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
 };
 
-type Props = {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-};
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-
-  if (!routing.locales.includes(locale as 'ar' | 'en')) {
-    notFound();
-  }
-
+  if (!routing.locales.includes(locale as 'ar' | 'en')) notFound();
   const messages = await getMessages();
   const isRtl = locale === 'ar';
 
@@ -46,11 +35,11 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#C9A84C" />
+        <meta name="theme-color" content="#f3c716" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,7 +52,6 @@ export default async function LocaleLayout({ children, params }: Props) {
               logo: 'https://expo-time.co/logo.png',
               description: 'Exhibition Stand Design & Fabrication company in Saudi Arabia',
               foundingDate: '2005',
-              numberOfEmployees: { '@type': 'QuantitativeValue', value: 50 },
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'King Fahd Road',
@@ -71,12 +59,10 @@ export default async function LocaleLayout({ children, params }: Props) {
                 postalCode: '12271',
                 addressCountry: 'SA',
               },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+966-11-234-5678',
-                contactType: 'customer service',
-                availableLanguage: ['Arabic', 'English'],
-              },
+              contactPoint: [
+                { '@type': 'ContactPoint', telephone: '+966-55-101-6181', contactType: 'customer service' },
+                { '@type': 'ContactPoint', telephone: '+966-11-239-3255', contactType: 'customer support' },
+              ],
               sameAs: [
                 'https://www.linkedin.com/company/expo-time',
                 'https://twitter.com/expotime',
@@ -85,13 +71,31 @@ export default async function LocaleLayout({ children, params }: Props) {
             }),
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var observer = new IntersectionObserver(function(entries) {
+                  entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                    }
+                  });
+                }, { threshold: 0.12 });
+                document.addEventListener('DOMContentLoaded', function() {
+                  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) {
+                    observer.observe(el);
+                  });
+                });
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         style={{
-          fontFamily: isRtl
-            ? "'Cairo', system-ui, sans-serif"
-            : "'Inter', system-ui, sans-serif",
-          backgroundColor: '#0A0E1A',
+          fontFamily: isRtl ? "'Cairo', system-ui, sans-serif" : "'Poppins', system-ui, sans-serif",
+          backgroundColor: '#0f1e2d',
           color: '#F9FAFB',
           margin: 0,
           padding: 0,

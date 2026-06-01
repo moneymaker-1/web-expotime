@@ -1,11 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
-import { Phone, Mail, MapPin, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { useLocale } from 'next-intl';
+import { Phone, Mail, MapPin, Instagram, Twitter, Linkedin, Youtube, MessageCircle, Smartphone } from 'lucide-react';
 
 export default function Footer() {
-  const t = useTranslations('footer');
   const locale = useLocale();
   const isRtl = locale === 'ar';
 
@@ -39,62 +38,45 @@ export default function Footer() {
     { href: `/${locale}/neom`, label: 'NEOM' },
   ];
 
+  const linkStyle = { color: '#64748b', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s', lineHeight: 1.6 };
+
   return (
-    <footer style={{ backgroundColor: '#060A14', borderTop: '1px solid rgba(201, 168, 76, 0.15)' }}>
+    <footer style={{ backgroundColor: '#0a1520', borderTop: '1px solid rgba(243,199,22,0.1)' }}>
+      {/* Brand divider */}
+      <div style={{ height: 3, background: 'linear-gradient(90deg, transparent, #f3c716 30%, #62b1b6 70%, transparent)' }} />
+
       {/* Main footer */}
-      <div className="container-custom" style={{ padding: '4rem 1.5rem' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '2.5rem',
-        }}>
-          {/* Brand column */}
-          <div style={{ gridColumn: 'span 1' }}>
-            <Link href={`/${locale}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-              <div style={{
-                width: 44, height: 44,
-                background: 'linear-gradient(135deg, #C9A84C, #E8C876)',
-                borderRadius: '0.625rem',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontWeight: 900, fontSize: '1.3rem', color: '#0A0E1A'
-              }}>E</div>
+      <div className="container-custom" style={{ padding: '4rem 1.5rem 3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '2.5rem' }}>
+
+          {/* Brand */}
+          <div>
+            <Link href={`/${locale}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.875rem', marginBottom: '1.25rem' }}>
+              <div style={{ width: 44, height: 44, background: 'linear-gradient(135deg, #f3c716, #d4a800)', borderRadius: '0.625rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '1.3rem', color: '#0f1e2d' }}>E</div>
               <div>
-                <div style={{ fontWeight: 900, fontSize: '1.1rem', color: '#F9FAFB' }}>
-                  {isRtl ? 'إكسبو تايم' : 'Expo Time'}
-                </div>
-                <div style={{ fontSize: '0.65rem', color: '#C9A84C', fontWeight: 600 }}>
-                  {isRtl ? 'أجنحة المعارض' : 'EXHIBITION STANDS'}
-                </div>
+                <div style={{ fontWeight: 800, fontSize: '1.1rem', color: '#F9FAFB' }}>{isRtl ? 'إكسبو تايم' : 'Expo Time'}</div>
+                <div style={{ fontSize: '0.6rem', color: '#62b1b6', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{isRtl ? 'منظم الفعاليات' : 'Event Organizer'}</div>
               </div>
             </Link>
-            <p style={{ color: '#9CA3AF', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-              {t('description')}
+            <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: 1.75, marginBottom: '1.5rem' }}>
+              {isRtl
+                ? 'شريكك الاستراتيجي لتصميم وتنفيذ أجنحة المعارض الاحترافية في المملكة العربية السعودية منذ 2005.'
+                : 'Your strategic partner for designing and executing professional exhibition stands in Saudi Arabia since 2005.'}
             </p>
-            {/* Social */}
-            <div style={{ display: 'flex', gap: '0.75rem' }}>
+            {/* Social icons */}
+            <div style={{ display: 'flex', gap: '0.625rem', flexWrap: 'wrap' }}>
               {[
-                { Icon: Instagram, href: 'https://instagram.com/expotimeksa', label: 'Instagram' },
-                { Icon: Twitter, href: 'https://twitter.com/expotime', label: 'Twitter' },
-                { Icon: Linkedin, href: 'https://linkedin.com/company/expo-time', label: 'LinkedIn' },
-                { Icon: Youtube, href: 'https://youtube.com/@expotime', label: 'YouTube' },
-              ].map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    width: 36, height: 36,
-                    borderRadius: '0.5rem',
-                    border: '1px solid rgba(201, 168, 76, 0.2)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    color: '#9CA3AF', textDecoration: 'none', transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#C9A84C'; e.currentTarget.style.color = '#C9A84C'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(201, 168, 76, 0.2)'; e.currentTarget.style.color = '#9CA3AF'; }}
+                { Icon: Instagram, href: 'https://instagram.com/expotimeksa', label: 'Instagram', color: '#E1306C' },
+                { Icon: Twitter, href: 'https://twitter.com/expotime', label: 'Twitter', color: '#1DA1F2' },
+                { Icon: Linkedin, href: 'https://linkedin.com/company/expo-time', label: 'LinkedIn', color: '#0A66C2' },
+                { Icon: Youtube, href: 'https://youtube.com/@expotime', label: 'YouTube', color: '#FF0000' },
+              ].map(({ Icon, href, label, color }) => (
+                <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
+                  style={{ width: 36, height: 36, borderRadius: '0.5rem', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', textDecoration: 'none', transition: 'all 0.25s' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = color; e.currentTarget.style.color = color; e.currentTarget.style.background = `${color}15`; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = '#64748b'; e.currentTarget.style.background = 'transparent'; }}
                 >
-                  <Icon size={16} />
+                  <Icon size={15} />
                 </a>
               ))}
             </div>
@@ -102,15 +84,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 style={{ color: '#C9A84C', fontWeight: 700, marginBottom: '1rem', fontSize: '0.95rem' }}>
-              {t('quickLinks')}
+            <h3 style={{ color: '#f3c716', fontWeight: 700, marginBottom: '1.25rem', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {isRtl ? 'روابط سريعة' : 'Quick Links'}
             </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} style={{ color: '#9CA3AF', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A84C')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}
+                  <Link href={l.href} style={linkStyle}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#f3c716')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
                   >{l.label}</Link>
                 </li>
               ))}
@@ -119,15 +101,15 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 style={{ color: '#C9A84C', fontWeight: 700, marginBottom: '1rem', fontSize: '0.95rem' }}>
-              {t('services')}
+            <h3 style={{ color: '#f3c716', fontWeight: 700, marginBottom: '1.25rem', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {isRtl ? 'خدماتنا' : 'Services'}
             </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               {services.map((s) => (
                 <li key={s.href}>
-                  <Link href={s.href} style={{ color: '#9CA3AF', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A84C')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}
+                  <Link href={s.href} style={linkStyle}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#62b1b6')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
                   >{s.label}</Link>
                 </li>
               ))}
@@ -136,15 +118,15 @@ export default function Footer() {
 
           {/* Cities */}
           <div>
-            <h3 style={{ color: '#C9A84C', fontWeight: 700, marginBottom: '1rem', fontSize: '0.95rem' }}>
-              {t('cities')}
+            <h3 style={{ color: '#f3c716', fontWeight: 700, marginBottom: '1.25rem', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {isRtl ? 'نخدم في' : 'We Serve In'}
             </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               {cities.map((c) => (
                 <li key={c.href}>
-                  <Link href={c.href} style={{ color: '#9CA3AF', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A84C')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}
+                  <Link href={c.href} style={linkStyle}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#62b1b6')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
                   >{c.label}</Link>
                 </li>
               ))}
@@ -153,21 +135,40 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 style={{ color: '#C9A84C', fontWeight: 700, marginBottom: '1rem', fontSize: '0.95rem' }}>
-              {t('contact')}
+            <h3 style={{ color: '#f3c716', fontWeight: 700, marginBottom: '1.25rem', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {isRtl ? 'تواصل معنا' : 'Contact Us'}
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
-              <a href="tel:+966112345678" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', color: '#9CA3AF', textDecoration: 'none', fontSize: '0.875rem' }}>
-                <Phone size={15} style={{ color: '#C9A84C', marginTop: '2px', flexShrink: 0 }} />
-                +966 11 234 5678
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <a href="tel:+966551016181" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none' }}>
+                <Smartphone size={16} style={{ color: '#f3c716', marginTop: 2, flexShrink: 0 }} />
+                <div>
+                  <div style={{ color: '#94a3b8', fontSize: '0.7rem', marginBottom: '2px' }}>{isRtl ? 'الجوال' : 'Mobile'}</div>
+                  <div style={{ color: '#cbd5e1', fontSize: '0.875rem', fontWeight: 600, direction: 'ltr' }}>+966 55 101 6181</div>
+                </div>
               </a>
-              <a href="mailto:info@expo-time.co" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', color: '#9CA3AF', textDecoration: 'none', fontSize: '0.875rem' }}>
-                <Mail size={15} style={{ color: '#C9A84C', marginTop: '2px', flexShrink: 0 }} />
-                info@expo-time.co
+              <a href="tel:+966112393255" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none' }}>
+                <Phone size={16} style={{ color: '#f3c716', marginTop: 2, flexShrink: 0 }} />
+                <div>
+                  <div style={{ color: '#94a3b8', fontSize: '0.7rem', marginBottom: '2px' }}>{isRtl ? 'الهاتف' : 'Phone'}</div>
+                  <div style={{ color: '#cbd5e1', fontSize: '0.875rem', fontWeight: 600, direction: 'ltr' }}>+966 11 239 3255</div>
+                </div>
               </a>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', color: '#9CA3AF', fontSize: '0.875rem' }}>
-                <MapPin size={15} style={{ color: '#C9A84C', marginTop: '2px', flexShrink: 0 }} />
-                {isRtl ? 'طريق الملك فهد، الرياض، المملكة العربية السعودية' : 'King Fahd Road, Riyadh, Saudi Arabia'}
+              <a href="https://wa.me/966112393255" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none' }}>
+                <MessageCircle size={16} style={{ color: '#25d366', marginTop: 2, flexShrink: 0 }} />
+                <div>
+                  <div style={{ color: '#94a3b8', fontSize: '0.7rem', marginBottom: '2px' }}>WhatsApp</div>
+                  <div style={{ color: '#25d366', fontSize: '0.875rem', fontWeight: 600, direction: 'ltr' }}>+966 11 239 3255</div>
+                </div>
+              </a>
+              <a href="mailto:info@expo-time.co" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none' }}>
+                <Mail size={16} style={{ color: '#62b1b6', marginTop: 2, flexShrink: 0 }} />
+                <div style={{ color: '#cbd5e1', fontSize: '0.875rem' }}>info@expo-time.co</div>
+              </a>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <MapPin size={16} style={{ color: '#62b1b6', marginTop: 2, flexShrink: 0 }} />
+                <div style={{ color: '#64748b', fontSize: '0.8rem', lineHeight: 1.6 }}>
+                  {isRtl ? 'طريق الملك فهد، الرياض، المملكة العربية السعودية' : 'King Fahd Road, Riyadh, Saudi Arabia'}
+                </div>
               </div>
             </div>
           </div>
@@ -175,14 +176,20 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '1.25rem' }}>
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.04)', padding: '1.25rem' }}>
         <div className="container-custom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
-          <p style={{ color: '#6B7280', fontSize: '0.8rem', margin: 0 }}>
-            © {new Date().getFullYear()} {isRtl ? 'إكسبو تايم' : 'Expo Time'}. {t('rights')}.
+          <p style={{ color: '#374151', fontSize: '0.8rem', margin: 0 }}>
+            © {new Date().getFullYear()} {isRtl ? 'إكسبو تايم' : 'Expo Time'}. {isRtl ? 'جميع الحقوق محفوظة' : 'All rights reserved'}.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <Link href={`/${locale}/privacy`} style={{ color: '#6B7280', fontSize: '0.8rem', textDecoration: 'none' }}>{t('privacy')}</Link>
-            <Link href={`/${locale}/terms`} style={{ color: '#6B7280', fontSize: '0.8rem', textDecoration: 'none' }}>{t('terms')}</Link>
+            <Link href={`/${locale}/privacy`} style={{ color: '#374151', fontSize: '0.8rem', textDecoration: 'none' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#f3c716'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+            >{isRtl ? 'الخصوصية' : 'Privacy'}</Link>
+            <Link href={`/${locale}/terms`} style={{ color: '#374151', fontSize: '0.8rem', textDecoration: 'none' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#f3c716'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+            >{isRtl ? 'الشروط' : 'Terms'}</Link>
           </div>
         </div>
       </div>

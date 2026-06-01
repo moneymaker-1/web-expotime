@@ -32,14 +32,14 @@ export default async function BlogPostPage({ params }: Props) {
       <Header />
       <main>
         <article>
-          <section style={{ background: 'linear-gradient(180deg, #060A14 0%, #0A0E1A 100%)', paddingTop: '8rem', paddingBottom: '3rem' }}>
+          <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '3rem' }}>
             <div className="container-custom" style={{ maxWidth: '860px' }}>
-              <Link href={`/${locale}/blog`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#C9A84C', textDecoration: 'none', marginBottom: '2rem', fontSize: '0.875rem' }}>
+              <Link href={`/${locale}/blog`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#f3c716', textDecoration: 'none', marginBottom: '2rem', fontSize: '0.875rem' }}>
                 {isRtl ? <ArrowRight size={16} /> : <ArrowLeft size={16} />}
                 {isRtl ? 'العودة للمدونة' : 'Back to Blog'}
               </Link>
               <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
-                <span style={{ background: 'rgba(201,168,76,0.15)', color: '#C9A84C', padding: '0.375rem 1rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700 }}>
+                <span style={{ background: 'rgba(243,199,22,0.15)', color: '#f3c716', padding: '0.375rem 1rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700 }}>
                   {isRtl ? post.categoryAr : post.categoryEn}
                 </span>
                 <span style={{ color: '#6B7280', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </section>
 
-          <section style={{ backgroundColor: '#0A0E1A', paddingBottom: '5rem' }}>
+          <section style={{ backgroundColor: '#0f1e2d', paddingBottom: '5rem' }}>
             <div className="container-custom" style={{ maxWidth: '860px' }}>
               <div style={{ borderRadius: '1.25rem', overflow: 'hidden', marginBottom: '3rem', aspectRatio: '16/7', position: 'relative' }}>
                 <Image src={post.image} alt={isRtl ? post.titleAr : post.titleEn} fill style={{ objectFit: 'cover' }} />
@@ -66,7 +66,7 @@ export default async function BlogPostPage({ params }: Props) {
               />
 
               {/* CTA */}
-              <div style={{ marginTop: '4rem', padding: '2.5rem', background: 'rgba(201,168,76,0.06)', border: '1px solid rgba(201,168,76,0.2)', borderRadius: '1.25rem', textAlign: 'center' }}>
+              <div style={{ marginTop: '4rem', padding: '2.5rem', background: 'rgba(243,199,22,0.06)', border: '1px solid rgba(243,199,22,0.2)', borderRadius: '1.25rem', textAlign: 'center' }}>
                 <h3 style={{ color: '#F9FAFB', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.75rem' }}>
                   {isRtl ? 'هل تريد جناح معرض استثنائي؟' : 'Want an Extraordinary Exhibition Stand?'}
                 </h3>
@@ -75,8 +75,8 @@ export default async function BlogPostPage({ params }: Props) {
                 </p>
                 <Link href={`/${locale}/contact`} style={{
                   display: 'inline-block', padding: '0.875rem 2.5rem',
-                  background: 'linear-gradient(135deg, #C9A84C, #B8960A)',
-                  color: '#0A0E1A', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none',
+                  background: 'linear-gradient(135deg, #f3c716, #d4a800)',
+                  color: '#0f1e2d', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none',
                 }}>
                   {isRtl ? 'احصل على عرض سعر' : 'Get a Quote'}
                 </Link>
