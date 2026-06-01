@@ -1,19 +1,17 @@
-import { ButtonLink } from "@/common/button";
-import { Heading } from "@/common/heading";
-import { Section } from "@/common/layout";
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <Section className="flex h-[calc(100vh-var(--header-height))] flex-col justify-center">
-      <Heading
-        subtitle="The page you're trying to access does not exist."
-        tag="404"
-      >
-        <h2>Page not found</h2>
-      </Heading>
-      <ButtonLink href="/" intent="primary">
-        Go back to Homepage
-      </ButtonLink>
-    </Section>
+    <html lang="ar" dir="rtl">
+      <body style={{ backgroundColor: '#0A0E1A', color: '#F9FAFB', fontFamily: 'system-ui' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', textAlign: 'center', padding: '2rem' }}>
+          <h1 style={{ fontSize: '6rem', fontWeight: '900', color: '#C9A84C', margin: 0 }}>404</h1>
+          <p style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>الصفحة غير موجودة</p>
+          <Link href="/ar" style={{ padding: '0.75rem 2rem', background: '#C9A84C', color: '#0A0E1A', borderRadius: '0.5rem', fontWeight: '700', textDecoration: 'none' }}>
+            العودة للرئيسية
+          </Link>
+        </div>
+      </body>
+    </html>
   );
 }
