@@ -1,15 +1,19 @@
 import { defineField, defineType } from 'sanity'
+
 export default defineType({
   name: 'service',
-  title: 'Service',
+  title: '⚙️ الخدمات',
   type: 'document',
   fields: [
-    defineField({ name: 'titleAr', title: 'العنوان (عربي)', type: 'string', validation: r => r.required() }),
-    defineField({ name: 'titleEn', title: 'Title (English)', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'titleAr', title: 'الاسم (عربي)', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'titleEn', title: 'Name (English)', type: 'string', validation: r => r.required() }),
     defineField({ name: 'descAr', title: 'الوصف (عربي)', type: 'text' }),
     defineField({ name: 'descEn', title: 'Description (English)', type: 'text' }),
-    defineField({ name: 'icon', title: 'Icon (emoji or name)', type: 'string' }),
-    defineField({ name: 'slug', title: 'Page Slug', type: 'slug', options: { source: 'titleEn' } }),
-    defineField({ name: 'order', title: 'Display Order', type: 'number' }),
+    defineField({ name: 'icon', title: 'أيقونة (إيموجي)', type: 'string' }),
+    defineField({ name: 'pageSlug', title: 'رابط الصفحة', type: 'string', description: 'مثال: exhibition-stand-design' }),
+    defineField({ name: 'order', title: 'الترتيب', type: 'number' }),
   ],
+  preview: {
+    select: { title: 'titleEn', subtitle: 'icon' },
+  },
 })
