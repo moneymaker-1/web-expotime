@@ -54,7 +54,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               foundingDate: '2015',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'King Fahd Road',
+                streetAddress: 'Anas Ibn Malik St., Al Yasmin District',
                 addressLocality: 'Riyadh',
                 postalCode: '12271',
                 addressCountry: 'SA',

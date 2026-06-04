@@ -109,8 +109,8 @@ function HeroSection({ locale }: { locale: string }) {
             {/* Trust indicators */}
             <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
               {[
-                { num: '500+', label: isRtl ? 'مشروع' : 'Projects' },
-                { num: '200+', label: isRtl ? 'عميل' : 'Clients' },
+                { num: '5000+', label: isRtl ? 'مشروع' : 'Projects' },
+                { num: '5000+', label: isRtl ? 'عميل' : 'Clients' },
                 { num: '20+', label: isRtl ? 'سنة خبرة' : 'Years' },
               ].map((s) => (
                 <div key={s.num}>
@@ -150,7 +150,7 @@ function HeroSection({ locale }: { locale: string }) {
                 borderRadius: '0.75rem', padding: '0.75rem 1.25rem',
                 backdropFilter: 'blur(10px)',
               }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0A0E1A', lineHeight: 1 }}>500+</div>
+                <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0A0E1A', lineHeight: 1 }}>5000+</div>
                 <div style={{ fontSize: '0.75rem', color: '#0A0E1A', fontWeight: 700 }}>
                   {isRtl ? 'مشروع ناجح' : 'Successful Projects'}
                 </div>
@@ -183,8 +183,8 @@ function HeroSection({ locale }: { locale: string }) {
 function StatsSection({ locale }: { locale: string }) {
   const isRtl = locale === 'ar';
   const stats = [
-    { num: '500+', labelAr: 'مشروع منجز', labelEn: 'Completed Projects', Icon: Award },
-    { num: '200+', labelAr: 'عميل راضٍ', labelEn: 'Satisfied Clients', Icon: Users },
+    { num: '5000+', labelAr: 'مشروع منجز', labelEn: 'Completed Projects', Icon: Award },
+    { num: '5000+', labelAr: 'عميل راضٍ', labelEn: 'Satisfied Clients', Icon: Users },
     { num: '20+', labelAr: 'سنة خبرة', labelEn: 'Years Experience', Icon: Clock },
     { num: '15+', labelAr: 'معرض دولي', labelEn: 'International Exhibitions', Icon: Globe },
   ];

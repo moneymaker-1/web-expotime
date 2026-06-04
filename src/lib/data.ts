@@ -235,7 +235,7 @@ export const faqs = {
     },
     {
       q: 'كيف يمكنني الحصول على عرض سعر؟',
-      a: 'يمكنك التواصل معنا عبر نموذج الاتصال أو الاتصال المباشر على +966 11 234 5678. سنتواصل معك خلال 24 ساعة بعرض سعر مفصل.',
+      a: 'يمكنك التواصل معنا عبر نموذج الاتصال أو الاتصال المباشر على +966 11 239 3255. سنتواصل معك خلال 24 ساعة بعرض سعر مفصل.',
     },
     {
       q: 'هل تعملون في المعارض الدولية خارج المملكة؟',
@@ -261,7 +261,7 @@ export const faqs = {
     },
     {
       q: 'How can I get a quote?',
-      a: 'You can contact us via the contact form or call us directly at +966 11 234 5678. We will get back to you within 24 hours with a detailed quote.',
+      a: 'You can contact us via the contact form or call us directly at +966 11 239 3255. We will get back to you within 24 hours with a detailed quote.',
     },
     {
       q: 'Do you work at international exhibitions outside Saudi Arabia?',

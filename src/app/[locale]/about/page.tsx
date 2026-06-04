@@ -48,7 +48,7 @@ export default async function AboutPage({ params }: Props) {
               {isRtl ? 'قصتنا' : 'Our Story'}
             </div>
             <h1 className="section-title" style={{ marginBottom: '1.25rem' }}>
-              {isRtl ? '20 عاماً من التميز في صناعة المعارض' : '20 Years of Excellence in the Exhibition Industry'}
+              {isRtl ? '10 أعوام من التميز في صناعة المعارض' : '10 Years of Excellence in the Exhibition Industry'}
             </h1>
             <p className="section-subtitle">
               {isRtl
@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: Props) {
                 </p>
                 {[
                   isRtl ? 'تصميم وتنفيذ بأعلى معايير الجودة' : 'Design and fabrication with the highest quality standards',
-                  isRtl ? 'خبرة 20 عاماً في السوق السعودي' : '20 years of experience in the Saudi market',
+                  isRtl ? 'خبرة 10 أعوام في السوق السعودي والإقليمي' : '10 years of experience in the Saudi and regional market',
                   isRtl ? 'فريق متخصص من 50+ محترف' : 'Specialized team of 50+ professionals',
                   isRtl ? 'خدمة شاملة من التصميم إلى التركيب' : 'Comprehensive service from design to installation',
                 ].map((item, i) => (
