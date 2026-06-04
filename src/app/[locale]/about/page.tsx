@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generatePageMetadata(locale,
     'من نحن | إكسبو تايم', 'About Us | Expo Time',
-    'تعرف على إكسبو تايم — شركة رائدة في تصميم وتنفيذ أجنحة المعارض في المملكة العربية السعودية منذ عام 2005',
-    'Learn about Expo Time — a leading exhibition stand design and fabrication company in Saudi Arabia since 2005',
+    'تعرف على إكسبو تايم — شركة رائدة في تصميم وتنفيذ أجنحة المعارض في المملكة العربية السعودية منذ عام 2015',
+    'Learn about Expo Time — a leading exhibition stand design and fabrication company in Saudi Arabia since 2015',
     '/about'
   );
 }
@@ -48,12 +48,12 @@ export default async function AboutPage({ params }: Props) {
               {isRtl ? 'قصتنا' : 'Our Story'}
             </div>
             <h1 className="section-title" style={{ marginBottom: '1.25rem' }}>
-              {isRtl ? '20 عاماً من التميز في صناعة المعارض' : '20 Years of Excellence in the Exhibition Industry'}
+              {isRtl ? '10 أعوام من التميز في صناعة المعارض' : '10 Years of Excellence in the Exhibition Industry'}
             </h1>
             <p className="section-subtitle">
               {isRtl
-                ? 'منذ عام 2005، ونحن نصنع الفارق في كل معرض، نحول الأفكار إلى واقع مبهر'
-                : 'Since 2005, we have been making a difference at every exhibition, turning ideas into stunning reality'}
+                ? 'منذ عام 2015، ونحن نصنع الفارق في كل معرض، نحول الأفكار إلى واقع مبهر'
+                : 'Since 2015, we have been making a difference at every exhibition, turning ideas into stunning reality'}
             </p>
           </div>
         </section>
@@ -68,17 +68,17 @@ export default async function AboutPage({ params }: Props) {
                 </h2>
                 <p style={{ color: '#9CA3AF', lineHeight: 1.8, marginBottom: '1.25rem' }}>
                   {isRtl
-                    ? 'إكسبو تايم شركة سعودية رائدة في تصميم وتنفيذ أجنحة المعارض والفعاليات. تأسست عام 2005 في الرياض، وأصبحت اليوم الشريك الاستراتيجي المفضل لأكثر من 200 شركة وجهة حكومية في المملكة العربية السعودية.'
-                    : 'Expo Time is a leading Saudi company specializing in exhibition stand design and fabrication. Founded in 2005 in Riyadh, it has become the preferred strategic partner for over 200 companies and government entities in Saudi Arabia.'}
+                    ? 'إكسبو تايم شركة سعودية رائدة في تصميم وتنفيذ أجنحة المعارض والفعاليات. تأسست عام 2015 في الرياض، وأصبحت اليوم الشريك الاستراتيجي المفضل لأكثر من 5000 شركة وجهة حكومية في المملكة العربية السعودية.'
+                    : 'Expo Time is a leading Saudi company specializing in exhibition stand design and fabrication. Founded in 2015 in Riyadh, it has become the preferred strategic partner for over 5000 companies and government entities in Saudi Arabia.'}
                 </p>
                 <p style={{ color: '#9CA3AF', lineHeight: 1.8, marginBottom: '2rem' }}>
                   {isRtl
-                    ? 'بفريق من أكثر من 50 متخصصاً في التصميم والهندسة وإدارة المشاريع، نقدم حلولاً شاملة لأجنحة المعارض المخصصة والنمطية وإدارة الفعاليات الكبرى.'
-                    : 'With a team of over 50 specialists in design, engineering, and project management, we provide comprehensive solutions for custom and modular exhibition stands and large-scale event management.'}
+                    ? 'بفريق من أكثر من 50 متخصصاً في التصميم والهندسة وإدارة المشاريع، نقدم حلولاً شاملة لأجنحة المعارض المخصصة والنمطية وإدارة الفعاليات الكبرى. ويمتد حضورنا محلياً وإقليمياً ودولياً ليشمل الرياض وجدة والمدينة المنورة، إضافةً إلى دبي وأبوظبي والدوحة والمنامة وصلالة والقاهرة والجزائر وبيروت وأنقرة وإسلام آباد.'
+                    : 'With a team of over 50 specialists in design, engineering, and project management, we provide comprehensive solutions for custom and modular exhibition stands and large-scale event management. Our presence spans locally, regionally, and internationally — including Riyadh, Jeddah, and Madinah, as well as Dubai, Abu Dhabi, Doha, Manama, Salalah, Cairo, Algiers, Beirut, Ankara, and Islamabad.'}
                 </p>
                 {[
                   isRtl ? 'تصميم وتنفيذ بأعلى معايير الجودة' : 'Design and fabrication with the highest quality standards',
-                  isRtl ? 'خبرة 20 عاماً في السوق السعودي' : '20 years of experience in the Saudi market',
+                  isRtl ? 'خبرة 10 أعوام في السوق السعودي والإقليمي' : '10 years of experience in the Saudi and regional market',
                   isRtl ? 'فريق متخصص من 50+ محترف' : 'Specialized team of 50+ professionals',
                   isRtl ? 'خدمة شاملة من التصميم إلى التركيب' : 'Comprehensive service from design to installation',
                 ].map((item, i) => (
@@ -103,8 +103,8 @@ export default async function AboutPage({ params }: Props) {
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
               {[
-                { num: '500+', labelAr: 'مشروع منجز', labelEn: 'Completed Projects', Icon: Award },
-                { num: '200+', labelAr: 'عميل راضٍ', labelEn: 'Satisfied Clients', Icon: Users },
+                { num: '5000+', labelAr: 'مشروع منجز', labelEn: 'Completed Projects', Icon: Award },
+                { num: '5000+', labelAr: 'عميل راضٍ', labelEn: 'Satisfied Clients', Icon: Users },
                 { num: '20+', labelAr: 'سنة خبرة', labelEn: 'Years Experience', Icon: Clock },
                 { num: '15+', labelAr: 'معرض دولي', labelEn: 'International Exhibitions', Icon: Globe },
               ].map(({ num, labelAr, labelEn, Icon }) => (

@@ -134,8 +134,8 @@ export default async function ServicesPage({ params }: Props) {
                 },
                 {
                   icon: '⭐',
-                  titleAr: '500+ مشروع ناجح',
-                  titleEn: '500+ Successful Projects',
+                  titleAr: '5000+ مشروع ناجح',
+                  titleEn: '5000+ Successful Projects',
                   descAr: 'سجل حافل من المشاريع الناجحة لكبرى الشركات',
                   descEn: 'Proven track record of successful projects for top companies',
                 },

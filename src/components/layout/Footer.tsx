@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
-import { Phone, Mail, MapPin, Instagram, Twitter, Linkedin, Youtube, MessageCircle, Smartphone } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Twitter, Linkedin, Facebook, MessageCircle, Smartphone } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
@@ -57,16 +57,16 @@ export default function Footer() {
             </div>
             <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: 1.75, marginBottom: '1.5rem' }}>
               {isRtl
-                ? 'شريكك الاستراتيجي لتصميم وتنفيذ أجنحة المعارض الاحترافية في المملكة العربية السعودية منذ 2005.'
-                : 'Your strategic partner for designing and executing professional exhibition stands in Saudi Arabia since 2005.'}
+                ? 'شريكك الاستراتيجي لتصميم وتنفيذ أجنحة المعارض الاحترافية في المملكة العربية السعودية منذ 2015.'
+                : 'Your strategic partner for designing and executing professional exhibition stands in Saudi Arabia since 2015.'}
             </p>
             {/* Social icons */}
             <div style={{ display: 'flex', gap: '0.625rem', flexWrap: 'wrap' }}>
               {[
-                { Icon: Instagram, href: 'https://instagram.com/expotimeksa', label: 'Instagram', color: '#E1306C' },
-                { Icon: Twitter, href: 'https://twitter.com/expotime', label: 'Twitter', color: '#1DA1F2' },
-                { Icon: Linkedin, href: 'https://linkedin.com/company/expo-time', label: 'LinkedIn', color: '#0A66C2' },
-                { Icon: Youtube, href: 'https://youtube.com/@expotime', label: 'YouTube', color: '#FF0000' },
+                { Icon: Instagram, href: 'https://www.instagram.com/expotime_llc', label: 'Instagram', color: '#E1306C' },
+                { Icon: Twitter, href: 'https://x.com/ExpoTime_LLC', label: 'X', color: '#1DA1F2' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/company/expotimellc/', label: 'LinkedIn', color: '#0A66C2' },
+                { Icon: Facebook, href: 'https://www.facebook.com/Expotimellc', label: 'Facebook', color: '#1877F2' },
               ].map(({ Icon, href, label, color }) => (
                 <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
                   style={{ width: 36, height: 36, borderRadius: '0.5rem', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', textDecoration: 'none', transition: 'all 0.25s' }}
@@ -164,7 +164,7 @@ export default function Footer() {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                 <MapPin size={16} style={{ color: '#62b1b6', marginTop: 2, flexShrink: 0 }} />
                 <div style={{ color: '#64748b', fontSize: '0.8rem', lineHeight: 1.6 }}>
-                  {isRtl ? 'طريق الملك فهد، الرياض، المملكة العربية السعودية' : 'King Fahd Road, Riyadh, Saudi Arabia'}
+                  {isRtl ? 'شارع أنس بن مالك، حي الياسمين، الرياض، المملكة العربية السعودية' : 'Anas Ibn Malik St., Al Yasmin District, Riyadh, Saudi Arabia'}
                 </div>
               </div>
             </div>

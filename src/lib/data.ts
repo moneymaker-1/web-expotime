@@ -98,18 +98,19 @@ export const portfolioProjects = [
 ];
 
 export const clients = [
-  { nameAr: 'أرامكو السعودية', nameEn: 'Saudi Aramco', sector: 'energy' },
-  { nameAr: 'stc', nameEn: 'STC', sector: 'tech' },
-  { nameAr: 'صندوق الاستثمارات العامة', nameEn: 'Public Investment Fund', sector: 'finance' },
-  { nameAr: 'نيوم', nameEn: 'NEOM', sector: 'construction' },
-  { nameAr: 'بنك الراجحي', nameEn: 'Al Rajhi Bank', sector: 'finance' },
-  { nameAr: 'سابك', nameEn: 'SABIC', sector: 'energy' },
-  { nameAr: 'وزارة الاستثمار', nameEn: 'Ministry of Investment', sector: 'government' },
-  { nameAr: 'الهيئة السعودية للفضاء', nameEn: 'Saudi Space Authority', sector: 'tech' },
-  { nameAr: 'موانئ', nameEn: 'Saudi Ports Authority', sector: 'government' },
-  { nameAr: 'جامعة الملك عبدالله', nameEn: 'KAUST', sector: 'education' },
-  { nameAr: 'وزارة الثقافة', nameEn: 'Ministry of Culture', sector: 'government' },
-  { nameAr: 'مجموعة أعمار', nameEn: 'Emaar Group', sector: 'construction' },
+  { nameAr: 'مدينة الملك عبدالعزيز للعلوم والتقنية', nameEn: 'KACST', sector: 'government', logo: '/clients/kacst.png' },
+  { nameAr: 'غرفة الرياض', nameEn: 'Riyadh Chamber', sector: 'government', logo: '/clients/riyadh-chamber.png' },
+  { nameAr: 'هيئة تطوير منطقة المدينة المنورة', nameEn: 'Al Madinah Region Development Authority', sector: 'government', logo: '/clients/madinah-authority.png' },
+  { nameAr: 'الجمعية الخيرية لرعاية الأيتام - إنسان', nameEn: 'Charity Committee for Orphans Care', sector: 'nonprofit', logo: '/clients/ensan.png' },
+  { nameAr: 'وزارة المالية', nameEn: 'Ministry of Finance', sector: 'government', logo: '/clients/ministry-finance.png' },
+  { nameAr: 'سمة - السعودية للمعلومات الائتمانية', nameEn: 'SIMAH', sector: 'finance', logo: '/clients/simah.png' },
+  { nameAr: 'ملتقى ألوان السعودية', nameEn: 'Colors of Saudi Arabia Forum', sector: 'culture', logo: '/clients/colors-ksa.png' },
+  { nameAr: 'وزارة الصحة', nameEn: 'Ministry of Health', sector: 'government', logo: '/clients/ministry-health.png' },
+  { nameAr: 'وزارة الدفاع', nameEn: 'Ministry of Defense', sector: 'government', logo: '/clients/ministry-defense.png' },
+  { nameAr: 'وزارة التعليم', nameEn: 'Ministry of Education', sector: 'government', logo: '/clients/ministry-education.png' },
+  { nameAr: 'حياك لاونج', nameEn: 'Hayyak Lounge', sector: 'hospitality', logo: '/clients/hayyak.png' },
+  { nameAr: 'stc', nameEn: 'stc', sector: 'tech', logo: '/clients/stc.png' },
+  { nameAr: 'SIDMC', nameEn: 'SIDMC', sector: 'tech', logo: '/clients/sidmc.png' },
 ];
 
 export const testimonials = [
@@ -234,7 +235,7 @@ export const faqs = {
     },
     {
       q: 'كيف يمكنني الحصول على عرض سعر؟',
-      a: 'يمكنك التواصل معنا عبر نموذج الاتصال أو الاتصال المباشر على +966 11 234 5678. سنتواصل معك خلال 24 ساعة بعرض سعر مفصل.',
+      a: 'يمكنك التواصل معنا عبر نموذج الاتصال أو الاتصال المباشر على +966 11 239 3255. سنتواصل معك خلال 24 ساعة بعرض سعر مفصل.',
     },
     {
       q: 'هل تعملون في المعارض الدولية خارج المملكة؟',
@@ -260,7 +261,7 @@ export const faqs = {
     },
     {
       q: 'How can I get a quote?',
-      a: 'You can contact us via the contact form or call us directly at +966 11 234 5678. We will get back to you within 24 hours with a detailed quote.',
+      a: 'You can contact us via the contact form or call us directly at +966 11 239 3255. We will get back to you within 24 hours with a detailed quote.',
     },
     {
       q: 'Do you work at international exhibitions outside Saudi Arabia?',

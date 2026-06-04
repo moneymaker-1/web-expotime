@@ -87,8 +87,8 @@ function HeroSection({ locale, isRtl }: { locale: string; isRtl: boolean }) {
 
             <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
               {[
-                { target: 500, suffix: '+', label: isRtl ? 'مشروع منجز' : 'Projects Done' },
-                { target: 200, suffix: '+', label: isRtl ? 'عميل راضٍ' : 'Happy Clients' },
+                { target: 5000, suffix: '+', label: isRtl ? 'مشروع منجز' : 'Projects Done' },
+                { target: 5000, suffix: '+', label: isRtl ? 'عميل راضٍ' : 'Happy Clients' },
                 { target: 20, suffix: '+', label: isRtl ? 'سنة خبرة' : 'Years Exp.' },
               ].map((s) => (
                 <div key={s.label} style={{ borderLeft: isRtl ? 'none' : '2px solid rgba(243,199,22,0.3)', borderRight: isRtl ? '2px solid rgba(243,199,22,0.3)' : 'none', paddingLeft: isRtl ? 0 : '1.5rem', paddingRight: isRtl ? '1.5rem' : 0 }}>
@@ -110,7 +110,7 @@ function HeroSection({ locale, isRtl }: { locale: string; isRtl: boolean }) {
                   <Award size={14} style={{ color: '#f3c716' }} />
                   <span style={{ color: '#f3c716', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{isRtl ? 'جائزة التميز 2025' : 'Excellence Award 2025'}</span>
                 </div>
-                <div style={{ fontSize: '1.75rem', fontWeight: 900, color: '#F9FAFB', lineHeight: 1 }}>500+</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 900, color: '#F9FAFB', lineHeight: 1 }}>5000+</div>
                 <div style={{ fontSize: '0.7rem', color: '#64748b', marginTop: '2px' }}>{isRtl ? 'مشروع ناجح' : 'Successful Projects'}</div>
               </div>
               <div style={{ position: 'absolute', top: '1.5rem', [isRtl ? 'left' : 'right']: '1.5rem', background: 'rgba(98,177,182,0.15)', border: '1px solid rgba(98,177,182,0.35)', borderRadius: '0.625rem', padding: '0.5rem 0.875rem', backdropFilter: 'blur(12px)' }}>
@@ -145,8 +145,8 @@ function HeroSection({ locale, isRtl }: { locale: string; isRtl: boolean }) {
 
 function StatsSection({ locale, isRtl }: { locale: string; isRtl: boolean }) {
   const stats = [
-    { target: 500, suffix: '+', labelAr: 'مشروع منجز', labelEn: 'Projects Completed', Icon: Award },
-    { target: 200, suffix: '+', labelAr: 'عميل راضٍ', labelEn: 'Happy Clients', Icon: Users },
+    { target: 5000, suffix: '+', labelAr: 'مشروع منجز', labelEn: 'Projects Completed', Icon: Award },
+    { target: 5000, suffix: '+', labelAr: 'عميل راضٍ', labelEn: 'Happy Clients', Icon: Users },
     { target: 20, suffix: '+', labelAr: 'سنة خبرة', labelEn: 'Years of Excellence', Icon: Clock },
     { target: 15, suffix: '+', labelAr: 'معرض دولي', labelEn: 'International Fairs', Icon: Globe },
   ];
@@ -235,7 +235,7 @@ function WhyUsSection({ locale, isRtl }: { locale: string; isRtl: boolean }) {
               {isRtl ? 'نصنع التجارب التي لا تُنسى' : 'We Craft Unforgettable Experiences'}
             </h2>
             <p style={{ color: '#64748b', lineHeight: 1.85, marginBottom: '2rem', fontSize: '1rem' }}>
-              {isRtl ? 'منذ 2005 ونحن نحول أفكار عملائنا إلى أجنحة معارض استثنائية تجذب الزوار وتعزز الحضور التجاري.' : "Since 2005, we transform our clients' ideas into exceptional exhibition stands that attract visitors."}
+              {isRtl ? 'منذ 2015 ونحن نحول أفكار عملائنا إلى أجنحة معارض استثنائية تجذب الزوار وتعزز الحضور التجاري.' : "Since 2015, we transform our clients' ideas into exceptional exhibition stands that attract visitors."}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
               {points.map((p) => (
