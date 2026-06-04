@@ -3,9 +3,9 @@
     "name": "Expo Time",
     "tagline": "We craft excellence at every exhibition",
     "description": "Expo Time is Saudi Arabia's premier exhibition stand design and fabrication company. We deliver world-class custom and modular exhibition stands, event management, and brand activation solutions.",
-    "phone": "+966 11 234 5678",
+    "phone": "+966 11 239 3255",
     "email": "info@expo-time.co",
-    "address": "Riyadh, Saudi Arabia"
+    "address": "Anas Ibn Malik St., Al Yasmin District, Riyadh, Saudi Arabia"
   },
   "nav": {
     "home": "Home",
@@ -74,8 +74,8 @@
   },
   "about": {
     "title": "About Us",
-    "subtitle": "20 Years of Excellence in the Exhibition Industry",
-    "description": "Since 2005, Expo Time has been delivering comprehensive exhibition stand and event solutions across Saudi Arabia. With over 20 years of experience, we are proud to have served over 200 clients across various industries.",
+    "subtitle": "Ten Years of Excellence in the Exhibition Industry",
+    "description": "Since 2015, Expo Time has been delivering comprehensive exhibition stand and event solutions across Saudi Arabia. With over 10 years of experience, we are proud to have served over 5000 clients across various industries.",
     "mission": "Our Mission",
     "missionText": "To be the premier strategic partner for our clients in the exhibition industry, delivering creative and innovative solutions that strengthen their presence in local and international markets.",
     "vision": "Our Vision",
@@ -108,7 +108,7 @@
     "send": "Send Request",
     "success": "Your request has been sent successfully! We will contact you within 24 hours.",
     "address": "Address",
-    "addressValue": "King Fahd Road, Riyadh 12271, Saudi Arabia",
+    "addressValue": "Anas Ibn Malik St., Al Yasmin District, Riyadh, Saudi Arabia",
     "phoneLabel": "Phone",
     "emailLabel": "Email"
   },

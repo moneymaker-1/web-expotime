@@ -32,7 +32,7 @@ export default async function PortfolioPage({ params }: Props) {
               {isRtl ? 'أعمالنا' : 'Our Portfolio'}
             </h1>
             <p className="section-subtitle">
-              {isRtl ? '500+ مشروع ناجح في أبرز المعارض السعودية والدولية' : '500+ successful projects at Saudi Arabia\'s most prominent exhibitions'}
+              {isRtl ? '5000+ مشروع ناجح في أبرز المعارض السعودية والدولية' : '5000+ successful projects at Saudi Arabia\'s most prominent exhibitions'}
             </p>
           </div>
         </section>

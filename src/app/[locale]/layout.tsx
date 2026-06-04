@@ -51,7 +51,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               url: 'https://expo-time.co',
               logo: 'https://expo-time.co/logo.png',
               description: 'Exhibition Stand Design & Fabrication company in Saudi Arabia',
-              foundingDate: '2005',
+              foundingDate: '2015',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'King Fahd Road',
@@ -64,9 +64,9 @@ export default async function LocaleLayout({ children, params }: Props) {
                 { '@type': 'ContactPoint', telephone: '+966-11-239-3255', contactType: 'customer support' },
               ],
               sameAs: [
-                'https://www.linkedin.com/company/expo-time',
-                'https://twitter.com/expotime',
-                'https://www.instagram.com/expotimeksa',
+                'https://www.linkedin.com/company/expotimellc/',
+                'https://x.com/ExpoTime_LLC',
+                'https://www.instagram.com/expotime_llc',
               ],
             }),
           }}

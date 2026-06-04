@@ -42,7 +42,7 @@ export default async function ClientsPage({ params }: Props) {
 
             <div style={{ textAlign: 'center', marginTop: '4rem' }}>
               <p style={{ color: '#9CA3AF', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                {isRtl ? 'أكثر من 200 عميل وضعوا ثقتهم فينا' : 'Over 200 clients have placed their trust in us'}
+                {isRtl ? 'أكثر من 5000 عميل وضعوا ثقتهم فينا' : 'Over 5000 clients have placed their trust in us'}
               </p>
               <Link href={`/${locale}/contact`} style={{
                 display: 'inline-block', padding: '0.875rem 2.5rem',

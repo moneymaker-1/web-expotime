@@ -23,7 +23,7 @@ export default async function ContactPage({ params }: Props) {
   const contactInfo = [
     { Icon: Phone, labelAr: 'الهاتف', labelEn: 'Phone', value: '+966 11 239 3255', href: 'tel:+966112393255' },
     { Icon: Mail, labelAr: 'البريد الإلكتروني', labelEn: 'Email', value: 'info@expo-time.co', href: 'mailto:info@expo-time.co' },
-    { Icon: MapPin, labelAr: 'العنوان', labelEn: 'Address', value: isRtl ? 'طريق الملك فهد، الرياض 12271' : 'King Fahd Road, Riyadh 12271', href: '#' },
+    { Icon: MapPin, labelAr: 'العنوان', labelEn: 'Address', value: isRtl ? 'شارع أنس بن مالك، حي الياسمين، الرياض' : 'Anas Ibn Malik St., Al Yasmin District, Riyadh', href: '#' },
     { Icon: Clock, labelAr: 'ساعات العمل', labelEn: 'Working Hours', value: isRtl ? 'الأحد - الخميس: 8ص - 5م' : 'Sun - Thu: 8AM - 5PM', href: '#' },
   ];
 

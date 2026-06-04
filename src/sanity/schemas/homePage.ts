@@ -17,8 +17,8 @@ export default defineType({
     defineField({ name: 'heroBadgeEn', title: 'Badge (English)', type: 'string', group: 'hero', initialValue: "Saudi Arabia's Strategic Exhibition Partner" }),
     defineField({ name: 'heroTitleAr', title: 'العنوان الرئيسي (عربي)', type: 'string', group: 'hero', initialValue: 'نصنع تجارب معارض لا تُنسى' }),
     defineField({ name: 'heroTitleEn', title: 'Main Title (English)', type: 'string', group: 'hero', initialValue: 'We Create Unforgettable Exhibition Experiences' }),
-    defineField({ name: 'heroSubtitleAr', title: 'العنوان الفرعي (عربي)', type: 'text', group: 'hero', initialValue: 'منذ 2005 ونحن نحوّل الأجنحة إلى تجارب استثنائية تجذب الزوار وتعزز العلامات التجارية في المملكة العربية السعودية والخليج.' }),
-    defineField({ name: 'heroSubtitleEn', title: 'Subtitle (English)', type: 'text', group: 'hero', initialValue: 'Since 2005, we transform exhibition stands into exceptional experiences that attract visitors and strengthen brands across Saudi Arabia and the Gulf.' }),
+    defineField({ name: 'heroSubtitleAr', title: 'العنوان الفرعي (عربي)', type: 'text', group: 'hero', initialValue: 'منذ 2015 ونحن نحوّل الأجنحة إلى تجارب استثنائية تجذب الزوار وتعزز العلامات التجارية في المملكة العربية السعودية والخليج.' }),
+    defineField({ name: 'heroSubtitleEn', title: 'Subtitle (English)', type: 'text', group: 'hero', initialValue: 'Since 2015, we transform exhibition stands into exceptional experiences that attract visitors and strengthen brands across Saudi Arabia and the Gulf.' }),
     defineField({ name: 'heroCTAMainAr', title: 'زر رئيسي (عربي)', type: 'string', group: 'hero', initialValue: 'احصل على عرض سعر' }),
     defineField({ name: 'heroCTAMainEn', title: 'Main Button (English)', type: 'string', group: 'hero', initialValue: 'Get a Free Quote' }),
     // Stats
