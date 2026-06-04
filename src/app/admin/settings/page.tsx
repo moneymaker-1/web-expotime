@@ -8,9 +8,10 @@ interface Settings {
   phone1: string; phone2: string; whatsapp: string; email: string
   addressAr: string; addressEn: string
   instagram: string; twitter: string; linkedin: string; youtube: string
+  heroVideoUrl: string; heroImageUrl: string
 }
 
-const EMPTY: Settings = { phone1: '', phone2: '', whatsapp: '', email: '', addressAr: '', addressEn: '', instagram: '', twitter: '', linkedin: '', youtube: '' }
+const EMPTY: Settings = { phone1: '', phone2: '', whatsapp: '', email: '', addressAr: '', addressEn: '', instagram: '', twitter: '', linkedin: '', youtube: '', heroVideoUrl: '', heroImageUrl: '' }
 
 export default function SettingsPage() {
   const [data, setData] = useState<Settings>(EMPTY)
@@ -20,7 +21,7 @@ export default function SettingsPage() {
 
   useEffect(() => {
     fetch('/api/admin?type=siteSettings').then(r => r.json()).then(d => {
-      if (d) setData(d)
+      if (d) setData({ ...EMPTY, ...d })
       setLoading(false)
     })
   }, [])
@@ -49,6 +50,15 @@ export default function SettingsPage() {
         <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: '#0f172a' }}>⚙️ إعدادات الموقع</h2>
         {saved && <span style={{ background: '#dcfce7', color: '#16a34a', padding: '6px 14px', borderRadius: 8, fontSize: 13 }}>✅ تم الحفظ</span>}
       </div>
+
+      <Card title="🎬 الهيدر — فيديو وصورة الخلفية">
+        <p style={{ fontSize: 12, color: '#64748b', marginBottom: 16, lineHeight: 1.6 }}>
+          ارفع الفيديو أو الصورة على أي خدمة استضافة (Cloudinary، Google Drive، إلخ) وضع الرابط المباشر هنا.
+          الفيديو يُفضَّل بامتداد .mp4 — الصورة تظهر احتياطياً إذا لم يتوفر فيديو.
+        </p>
+        <Field label="🎥 رابط فيديو الهيدر (Hero Video URL — .mp4)" value={data.heroVideoUrl} onChange={v => set('heroVideoUrl', v)} type="url" placeholder="https://..." />
+        <Field label="🖼️ رابط صورة الهيدر (Hero Image URL — احتياطي)" value={data.heroImageUrl} onChange={v => set('heroImageUrl', v)} type="url" placeholder="https://..." />
+      </Card>
 
       <Card title="📞 معلومات التواصل">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 16px' }}>
