@@ -23,27 +23,34 @@ export default async function IndustriesPage({ params }: Props) {
     <>
       <Header />
       <main>
-        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: '#fff', paddingTop: '8rem', paddingBottom: '4rem', borderBottom: '1px solid #f0f0f0' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
-            <h1 className="section-title" style={{ marginBottom: '1rem' }}>{isRtl ? 'القطاعات التي نخدمها' : 'Industries We Serve'}</h1>
-            <p className="section-subtitle">{isRtl ? 'خبرة عميقة في خدمة جميع القطاعات الاقتصادية' : 'Deep expertise serving all economic sectors'}</p>
+            <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#8DC63F', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem' }}>
+              {isRtl ? 'القطاعات' : 'Industries'}
+            </p>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', fontWeight: 900, color: '#1a1a1a', marginBottom: '1.25rem', lineHeight: 1.15 }}>
+              {isRtl ? 'القطاعات التي نخدمها' : 'Industries We Serve'}
+            </h1>
+            <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
+              {isRtl ? 'خبرة عميقة في خدمة جميع القطاعات الاقتصادية' : 'Deep expertise serving all economic sectors'}
+            </p>
           </div>
         </section>
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
               {industries.map((ind) => (
-                <div key={ind.slugEn} className="card" style={{ padding: '2rem' }}>
+                <div key={ind.slugEn} style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '2rem' }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>{ind.icon}</div>
-                  <h3 style={{ fontWeight: 700, color: '#F9FAFB', fontSize: '1.1rem', marginBottom: '0.75rem' }}>
+                  <h3 style={{ fontWeight: 700, color: '#1a1a1a', fontSize: '1.1rem', marginBottom: '0.75rem' }}>
                     {isRtl ? ind.nameAr : ind.nameEn}
                   </h3>
-                  <p style={{ color: '#9CA3AF', fontSize: '0.875rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+                  <p style={{ color: '#555', fontSize: '0.875rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
                     {isRtl
                       ? `نقدم حلول أجنحة معارض متخصصة لقطاع ${ind.nameAr} في المملكة العربية السعودية`
                       : `We deliver specialized exhibition stand solutions for the ${ind.nameEn} sector in Saudi Arabia`}
                   </p>
-                  <Link href={`/${locale}/contact`} style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#f3c716', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
+                  <Link href={`/${locale}/contact`} style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#8DC63F', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
                     {isRtl ? 'احصل على عرض سعر' : 'Get a Quote'} <ArrowRight size={14} />
                   </Link>
                 </div>

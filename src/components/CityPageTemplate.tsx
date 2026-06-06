@@ -61,30 +61,29 @@ export default function CityPageTemplate({
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ position: 'relative', paddingTop: '8rem', paddingBottom: '5rem', overflow: 'hidden', backgroundColor: '#0a1520' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(243,199,22,0.04) 1px, transparent 1px),linear-gradient(90deg,rgba(243,199,22,0.04) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
-          <div className="container-custom" style={{ position: 'relative' }}>
+        <section style={{ background: '#fff', paddingTop: '8rem', paddingBottom: '4rem', borderBottom: '1px solid #f0f0f0' }}>
+          <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
               <div style={{ order: isRtl ? 2 : 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-                  <MapPin size={16} style={{ color: '#f3c716' }} />
-                  <span style={{ color: '#f3c716', fontWeight: 600, fontSize: '0.875rem' }}>{city}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                  <MapPin size={16} style={{ color: '#8DC63F' }} />
+                  <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#8DC63F', textTransform: 'uppercase', letterSpacing: '0.15em' }}>{city}</span>
                 </div>
-                <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', fontWeight: 900, color: '#F9FAFB', lineHeight: 1.15, marginBottom: '1.25rem' }}>
+                <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.15, marginBottom: '1.25rem' }}>
                   {isRtl ? `تصميم أجنحة المعارض في ${cityAr}` : `Exhibition Stand Design in ${cityEn}`}
                 </h1>
-                <p style={{ color: '#9CA3AF', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '2rem' }}>{desc}</p>
+                <p style={{ color: '#555', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '2rem' }}>{desc}</p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <Link href={`/${locale}/contact`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 2rem', background: 'linear-gradient(135deg, #f3c716, #d4a800)', color: '#0f1e2d', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none' }}>
+                  <Link href={`/${locale}/contact`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 2rem', background: '#8DC63F', color: '#fff', fontWeight: 800, borderRadius: '0.75rem', textDecoration: 'none' }}>
                     {isRtl ? 'احصل على عرض سعر' : 'Get a Quote'} <ArrowRight size={16} />
                   </Link>
-                  <a href="tel:+966112393255" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 2rem', border: '1px solid rgba(243,199,22,0.4)', color: '#f3c716', fontWeight: 700, borderRadius: '0.625rem', textDecoration: 'none' }}>
+                  <a href="tel:+966112393255" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 2rem', border: '2px solid #8DC63F', color: '#8DC63F', fontWeight: 700, borderRadius: '0.75rem', textDecoration: 'none' }}>
                     <Phone size={16} /> +966 11 239 3255
                   </a>
                 </div>
               </div>
               <div style={{ order: isRtl ? 1 : 2 }}>
-                <div style={{ borderRadius: '1.25rem', overflow: 'hidden', border: '1px solid rgba(243,199,22,0.2)', aspectRatio: '4/3', position: 'relative' }}>
+                <div style={{ borderRadius: '1.25rem', overflow: 'hidden', border: '1px solid #eee', aspectRatio: '4/3', position: 'relative' }}>
                   <Image src={image} alt={`Exhibition stands in ${cityEn}`} fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
@@ -94,21 +93,21 @@ export default function CityPageTemplate({
         </section>
 
         {/* Services in city */}
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
           <div className="container-custom">
-            <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 800, color: '#1a1a1a', textAlign: 'center', marginBottom: '3rem' }}>
               {isRtl ? `خدماتنا في ${cityAr}` : `Our Services in ${cityEn}`}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
               {services.slice(0, 6).map((s) => (
                 <Link key={s.slug} href={`/${locale}/${s.slug}`} style={{ textDecoration: 'none' }}>
-                  <div className="card" style={{ padding: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'flex-start', transition: 'border-color 0.2s' }}>
                     <span style={{ fontSize: '1.5rem' }}>{s.icon}</span>
                     <div>
-                      <h3 style={{ fontWeight: 700, color: '#F9FAFB', fontSize: '0.95rem', marginBottom: '0.375rem' }}>
+                      <h3 style={{ fontWeight: 700, color: '#1a1a1a', fontSize: '0.95rem', marginBottom: '0.375rem' }}>
                         {isRtl ? s.titleAr : s.titleEn}
                       </h3>
-                      <p style={{ color: '#6B7280', fontSize: '0.8rem', lineHeight: 1.5 }}>
+                      <p style={{ color: '#555', fontSize: '0.8rem', lineHeight: 1.5 }}>
                         {isRtl ? `في ${cityAr}` : `in ${cityEn}`}
                       </p>
                     </div>
@@ -120,16 +119,16 @@ export default function CityPageTemplate({
         </section>
 
         {/* Exhibition venues */}
-        <section className="section-padding" style={{ backgroundColor: '#0a1520' }}>
+        <section className="section-padding" style={{ backgroundColor: '#fff' }}>
           <div className="container-custom">
-            <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 800, color: '#1a1a1a', textAlign: 'center', marginBottom: '3rem' }}>
               {isRtl ? `أبرز مراكز المعارض في ${cityAr}` : `Key Exhibition Venues in ${cityEn}`}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem' }}>
               {venueList.map((v, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem', background: '#162534', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '0.75rem' }}>
-                  <Building size={22} style={{ color: '#f3c716', flexShrink: 0 }} />
-                  <span style={{ color: '#D1D5DB', fontWeight: 600 }}>{v}</span>
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem', background: '#f8f8f8', border: '1px solid #eee', borderRadius: '0.75rem' }}>
+                  <Building size={22} style={{ color: '#8DC63F', flexShrink: 0 }} />
+                  <span style={{ color: '#1a1a1a', fontWeight: 600 }}>{v}</span>
                 </div>
               ))}
             </div>
@@ -138,16 +137,16 @@ export default function CityPageTemplate({
 
         {/* Key exhibitions */}
         {exhibitions.length > 0 && (
-          <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+          <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
             <div className="container-custom">
-              <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 800, color: '#1a1a1a', textAlign: 'center', marginBottom: '3rem' }}>
                 {isRtl ? `أبرز المعارض في ${cityAr}` : `Top Exhibitions in ${cityEn}`}
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
                 {exhibitions.map((ex, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1.25rem', background: '#162534', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-                    <CheckCircle size={16} style={{ color: '#f3c716', flexShrink: 0, marginTop: '2px' }} />
-                    <span style={{ color: '#D1D5DB', fontSize: '0.9rem' }}>{ex}</span>
+                  <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1.25rem', background: '#fff', borderRadius: '0.75rem', border: '1px solid #eee' }}>
+                    <CheckCircle size={16} style={{ color: '#8DC63F', flexShrink: 0, marginTop: '2px' }} />
+                    <span style={{ color: '#555', fontSize: '0.9rem' }}>{ex}</span>
                   </div>
                 ))}
               </div>
@@ -156,16 +155,16 @@ export default function CityPageTemplate({
         )}
 
         {/* FAQ */}
-        <section className="section-padding" style={{ backgroundColor: '#0a1520' }}>
+        <section className="section-padding" style={{ backgroundColor: '#fff' }}>
           <div className="container-custom" style={{ maxWidth: '800px' }}>
-            <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 800, color: '#1a1a1a', textAlign: 'center', marginBottom: '2.5rem' }}>
               {isRtl ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {faqs.map((faq, i) => (
-                <div key={i} style={{ background: '#162534', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '0.75rem', padding: '1.5rem' }}>
-                  <h3 style={{ fontWeight: 700, color: '#F9FAFB', marginBottom: '0.75rem' }}>{faq.q}</h3>
-                  <p style={{ color: '#9CA3AF', lineHeight: 1.7, fontSize: '0.9rem' }}>{faq.a}</p>
+                <div key={i} style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '1.5rem' }}>
+                  <h3 style={{ fontWeight: 700, color: '#1a1a1a', marginBottom: '0.75rem' }}>{faq.q}</h3>
+                  <p style={{ color: '#555', lineHeight: 1.7, fontSize: '0.9rem' }}>{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -173,16 +172,16 @@ export default function CityPageTemplate({
         </section>
 
         {/* CTA */}
-        <section style={{ padding: '4rem 0', backgroundColor: '#0f1e2d' }}>
+        <section style={{ padding: '4rem 0', backgroundColor: '#111111' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
-            <div style={{ background: 'rgba(243,199,22,0.06)', border: '1px solid rgba(243,199,22,0.2)', borderRadius: '1.5rem', padding: '3.5rem 2rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 900, color: '#F9FAFB', marginBottom: '1rem' }}>
+            <div style={{ background: 'rgba(141,198,63,0.08)', border: '1px solid rgba(141,198,63,0.25)', borderRadius: '1.5rem', padding: '3.5rem 2rem' }}>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 900, color: '#fff', marginBottom: '1rem' }}>
                 {isRtl ? `احصل على جناح معرض استثنائي في ${cityAr}` : `Get an Extraordinary Exhibition Stand in ${cityEn}`}
               </h2>
-              <p style={{ color: '#9CA3AF', marginBottom: '2rem' }}>
+              <p style={{ color: '#aaa', marginBottom: '2rem' }}>
                 {isRtl ? 'فريقنا جاهز لخدمتك — تواصل معنا الآن' : 'Our team is ready to serve you — contact us now'}
               </p>
-              <Link href={`/${locale}/contact`} style={{ display: 'inline-block', padding: '1rem 2.5rem', background: 'linear-gradient(135deg, #f3c716, #d4a800)', color: '#0f1e2d', fontWeight: 800, borderRadius: '0.625rem', textDecoration: 'none' }}>
+              <Link href={`/${locale}/contact`} style={{ display: 'inline-block', padding: '1rem 2.5rem', background: '#8DC63F', color: '#fff', fontWeight: 800, borderRadius: '0.75rem', textDecoration: 'none' }}>
                 {isRtl ? 'احصل على عرض سعر مجاني' : 'Get a Free Quote'}
               </Link>
             </div>

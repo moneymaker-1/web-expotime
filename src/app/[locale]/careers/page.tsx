@@ -29,41 +29,48 @@ export default async function CareersPage({ params }: Props) {
     <>
       <Header />
       <main>
-        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: '#fff', paddingTop: '8rem', paddingBottom: '4rem', borderBottom: '1px solid #f0f0f0' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
-            <h1 className="section-title" style={{ marginBottom: '1rem' }}>{isRtl ? 'انضم إلى فريقنا' : 'Join Our Team'}</h1>
-            <p className="section-subtitle">{isRtl ? 'نحن دائماً نبحث عن المواهب المتميزة' : 'We are always looking for exceptional talent'}</p>
+            <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#8DC63F', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem' }}>
+              {isRtl ? 'الوظائف' : 'Careers'}
+            </p>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', fontWeight: 900, color: '#1a1a1a', marginBottom: '1.25rem', lineHeight: 1.15 }}>
+              {isRtl ? 'انضم إلى فريقنا' : 'Join Our Team'}
+            </h1>
+            <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
+              {isRtl ? 'نحن دائماً نبحث عن المواهب المتميزة' : 'We are always looking for exceptional talent'}
+            </p>
           </div>
         </section>
 
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
           <div className="container-custom">
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#1a1a1a', marginBottom: '2rem' }}>
               {isRtl ? 'الوظائف المتاحة' : 'Open Positions'}
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {openings.map((job) => (
-                <div key={job.titleEn} className="card" style={{ padding: '1.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                <div key={job.titleEn} style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '1.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-                      <Briefcase size={18} style={{ color: '#f3c716' }} />
-                      <h3 style={{ fontWeight: 700, color: '#F9FAFB', fontSize: '1.05rem' }}>{isRtl ? job.titleAr : job.titleEn}</h3>
+                      <Briefcase size={18} style={{ color: '#8DC63F' }} />
+                      <h3 style={{ fontWeight: 700, color: '#1a1a1a', fontSize: '1.05rem' }}>{isRtl ? job.titleAr : job.titleEn}</h3>
                     </div>
                     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                      <span style={{ color: '#9CA3AF', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                      <span style={{ color: '#555', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
                         <MapPin size={13} /> {isRtl ? job.cityAr : job.cityEn}
                       </span>
-                      <span style={{ color: '#9CA3AF', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                      <span style={{ color: '#555', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
                         <Clock size={13} /> {isRtl ? job.typeAr : job.typeEn}
                       </span>
-                      <span style={{ color: '#f3c716', fontSize: '0.8rem', background: 'rgba(243,199,22,0.1)', padding: '0.2rem 0.6rem', borderRadius: '9999px' }}>
+                      <span style={{ color: '#8DC63F', fontSize: '0.8rem', background: 'rgba(141,198,63,0.1)', padding: '0.2rem 0.6rem', borderRadius: '9999px' }}>
                         {isRtl ? job.deptAr : job.deptEn}
                       </span>
                     </div>
                   </div>
                   <Link href={`/${locale}/contact`} style={{
-                    padding: '0.625rem 1.5rem', background: 'linear-gradient(135deg, #f3c716, #d4a800)',
-                    color: '#0f1e2d', fontWeight: 700, borderRadius: '0.5rem', textDecoration: 'none', fontSize: '0.875rem',
+                    padding: '0.625rem 1.5rem', background: '#8DC63F',
+                    color: '#fff', fontWeight: 700, borderRadius: '0.75rem', textDecoration: 'none', fontSize: '0.875rem',
                   }}>
                     {isRtl ? 'تقدم الآن' : 'Apply Now'}
                   </Link>
@@ -71,17 +78,17 @@ export default async function CareersPage({ params }: Props) {
               ))}
             </div>
 
-            <div style={{ marginTop: '3rem', padding: '2.5rem', background: '#162534', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem', textAlign: 'center' }}>
-              <h3 style={{ color: '#F9FAFB', fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.75rem' }}>
+            <div style={{ marginTop: '3rem', padding: '2.5rem', background: '#fff', border: '1px solid #eee', borderRadius: '1rem', textAlign: 'center' }}>
+              <h3 style={{ color: '#1a1a1a', fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.75rem' }}>
                 {isRtl ? 'لم تجد وظيفتك المناسبة؟' : "Didn't Find the Right Position?"}
               </h3>
-              <p style={{ color: '#9CA3AF', marginBottom: '1.5rem' }}>
+              <p style={{ color: '#555', marginBottom: '1.5rem' }}>
                 {isRtl ? 'أرسل سيرتك الذاتية وسنتواصل معك عند توفر فرصة مناسبة' : 'Send your CV and we will contact you when a suitable opportunity arises'}
               </p>
               <Link href={`/${locale}/contact`} style={{
                 display: 'inline-block', padding: '0.75rem 2rem',
-                border: '1px solid rgba(243,199,22,0.4)',
-                color: '#f3c716', fontWeight: 700, borderRadius: '0.5rem', textDecoration: 'none',
+                border: '2px solid #8DC63F',
+                color: '#8DC63F', fontWeight: 700, borderRadius: '0.75rem', textDecoration: 'none',
               }}>
                 {isRtl ? 'أرسل سيرتك الذاتية' : 'Send Your CV'}
               </Link>

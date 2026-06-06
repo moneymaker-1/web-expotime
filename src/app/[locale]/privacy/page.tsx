@@ -38,39 +38,39 @@ export default async function PrivacyPage({ params }: Props) {
   return (
     <>
       <Header />
-      <main style={{ background: '#070f18', minHeight: '100vh', paddingTop: '7rem', paddingBottom: '5rem' }} dir={isRtl ? 'rtl' : 'ltr'}>
+      <main style={{ background: '#fff', minHeight: '100vh', paddingTop: '7rem', paddingBottom: '5rem' }} dir={isRtl ? 'rtl' : 'ltr'}>
         <div className="container-custom" style={{ maxWidth: 800, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ marginBottom: '3rem' }}>
-            <h1 style={{ fontSize: 'clamp(2rem,4vw,2.75rem)', fontWeight: 800, color: '#F9FAFB', marginBottom: '0.75rem' }}>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,2.75rem)', fontWeight: 800, color: '#1a1a1a', marginBottom: '0.75rem' }}>
               {isRtl ? 'سياسة الخصوصية' : 'Privacy Policy'}
             </h1>
-            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
+            <p style={{ color: '#aaa', fontSize: '0.9rem' }}>
               {isRtl ? 'آخر تحديث: يناير 2025' : 'Last updated: January 2025'}
             </p>
-            <div style={{ height: 3, width: 60, background: 'linear-gradient(90deg, #f3c716, #62b1b6)', borderRadius: 2, marginTop: '1rem' }} />
+            <div style={{ height: 3, width: 60, background: '#8DC63F', borderRadius: 2, marginTop: '1rem' }} />
           </div>
 
-          <p style={{ color: '#94a3b8', lineHeight: 1.8, marginBottom: '2.5rem', fontSize: '1rem' }}>
+          <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '2.5rem', fontSize: '1rem' }}>
             {isRtl
               ? 'تلتزم شركة إكسبو تايم بحماية خصوصيتك. توضح هذه السياسة كيفية جمع معلوماتك الشخصية واستخدامها وحمايتها.'
               : 'Expo Time is committed to protecting your privacy. This policy explains how we collect, use, and protect your personal information.'}
           </p>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {sections.map((s, i) => (
-              <div key={i} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '1rem', padding: '1.75rem' }}>
-                <h2 style={{ color: '#f3c716', fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.875rem' }}>
+              <div key={i} style={{ background: '#f8f8f8', border: '1px solid #eee', borderRadius: '1rem', padding: '1.75rem' }}>
+                <h2 style={{ color: '#8DC63F', fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.875rem' }}>
                   {i + 1}. {s.title}
                 </h2>
-                <p style={{ color: '#94a3b8', lineHeight: 1.8, margin: 0 }}>{s.content}</p>
+                <p style={{ color: '#555', lineHeight: 1.8, margin: 0 }}>{s.content}</p>
               </div>
             ))}
           </div>
 
-          <div style={{ marginTop: '3rem', padding: '1.5rem', background: 'rgba(243,199,22,0.06)', border: '1px solid rgba(243,199,22,0.2)', borderRadius: '1rem', textAlign: 'center' }}>
-            <p style={{ color: '#94a3b8', margin: 0 }}>
+          <div style={{ marginTop: '3rem', padding: '1.5rem', background: 'rgba(141,198,63,0.06)', border: '1px solid rgba(141,198,63,0.2)', borderRadius: '1rem', textAlign: 'center' }}>
+            <p style={{ color: '#555', margin: 0 }}>
               {isRtl ? 'للاستفسار: ' : 'For inquiries: '}
-              <a href="mailto:info@expo-time.co" style={{ color: '#f3c716', textDecoration: 'none' }}>info@expo-time.co</a>
+              <a href="mailto:info@expo-time.co" style={{ color: '#8DC63F', textDecoration: 'none' }}>info@expo-time.co</a>
             </p>
           </div>
         </div>

@@ -42,15 +42,15 @@ export default async function AboutPage({ params }: Props) {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '5rem' }}>
+        <section style={{ background: '#fff', paddingTop: '8rem', paddingBottom: '4rem', borderBottom: '1px solid #f0f0f0' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
-            <div className="badge" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>
+            <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#8DC63F', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem' }}>
               {isRtl ? 'قصتنا' : 'Our Story'}
-            </div>
-            <h1 className="section-title" style={{ marginBottom: '1.25rem' }}>
+            </p>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', fontWeight: 900, color: '#1a1a1a', marginBottom: '1.25rem', lineHeight: 1.15 }}>
               {isRtl ? '10 أعوام من التميز في صناعة المعارض' : '10 Years of Excellence in the Exhibition Industry'}
             </h1>
-            <p className="section-subtitle">
+            <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
               {isRtl
                 ? 'منذ عام 2015، ونحن نصنع الفارق في كل معرض، نحول الأفكار إلى واقع مبهر'
                 : 'Since 2015, we have been making a difference at every exhibition, turning ideas into stunning reality'}
@@ -59,19 +59,19 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Story */}
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
               <div style={{ order: isRtl ? 2 : 1 }}>
-                <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '1.5rem' }}>
+                <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#1a1a1a', marginBottom: '1.5rem' }}>
                   {isRtl ? 'من نحن' : 'Who We Are'}
                 </h2>
-                <p style={{ color: '#9CA3AF', lineHeight: 1.8, marginBottom: '1.25rem' }}>
+                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1.25rem' }}>
                   {isRtl
                     ? 'إكسبو تايم شركة سعودية رائدة في تصميم وتنفيذ أجنحة المعارض والفعاليات. تأسست عام 2015 في الرياض، وأصبحت اليوم الشريك الاستراتيجي المفضل لأكثر من 5000 شركة وجهة حكومية في المملكة العربية السعودية.'
                     : 'Expo Time is a leading Saudi company specializing in exhibition stand design and fabrication. Founded in 2015 in Riyadh, it has become the preferred strategic partner for over 5000 companies and government entities in Saudi Arabia.'}
                 </p>
-                <p style={{ color: '#9CA3AF', lineHeight: 1.8, marginBottom: '2rem' }}>
+                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '2rem' }}>
                   {isRtl
                     ? 'بفريق من أكثر من 50 متخصصاً في التصميم والهندسة وإدارة المشاريع، نقدم حلولاً شاملة لأجنحة المعارض المخصصة والنمطية وإدارة الفعاليات الكبرى. ويمتد حضورنا محلياً وإقليمياً ودولياً ليشمل الرياض وجدة والمدينة المنورة، إضافةً إلى دبي وأبوظبي والدوحة والمنامة وصلالة والقاهرة والجزائر وبيروت وأنقرة وإسلام آباد.'
                     : 'With a team of over 50 specialists in design, engineering, and project management, we provide comprehensive solutions for custom and modular exhibition stands and large-scale event management. Our presence spans locally, regionally, and internationally — including Riyadh, Jeddah, and Madinah, as well as Dubai, Abu Dhabi, Doha, Manama, Salalah, Cairo, Algiers, Beirut, Ankara, and Islamabad.'}
@@ -83,13 +83,13 @@ export default async function AboutPage({ params }: Props) {
                   isRtl ? 'خدمة شاملة من التصميم إلى التركيب' : 'Comprehensive service from design to installation',
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                    <CheckCircle size={18} style={{ color: '#f3c716', flexShrink: 0 }} />
-                    <span style={{ color: '#D1D5DB', fontSize: '0.9rem' }}>{item}</span>
+                    <CheckCircle size={18} style={{ color: '#8DC63F', flexShrink: 0 }} />
+                    <span style={{ color: '#555', fontSize: '0.9rem' }}>{item}</span>
                   </div>
                 ))}
               </div>
               <div style={{ order: isRtl ? 1 : 2 }}>
-                <div style={{ borderRadius: '1.25rem', overflow: 'hidden', border: '1px solid rgba(243,199,22,0.2)', aspectRatio: '4/3', position: 'relative' }}>
+                <div style={{ borderRadius: '1.25rem', overflow: 'hidden', border: '1px solid #eee', aspectRatio: '4/3', position: 'relative' }}>
                   <Image src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80" alt="About Expo Time" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Stats */}
-        <section style={{ backgroundColor: '#0a1520', padding: '4rem 0', borderTop: '1px solid rgba(243,199,22,0.1)', borderBottom: '1px solid rgba(243,199,22,0.1)' }}>
+        <section style={{ backgroundColor: '#111111', padding: '4rem 0' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
               {[
@@ -109,9 +109,9 @@ export default async function AboutPage({ params }: Props) {
                 { num: '15+', labelAr: 'معرض دولي', labelEn: 'International Exhibitions', Icon: Globe },
               ].map(({ num, labelAr, labelEn, Icon }) => (
                 <div key={num} style={{ textAlign: 'center', padding: '1.5rem' }}>
-                  <Icon size={28} style={{ color: '#f3c716', margin: '0 auto 0.75rem' }} />
-                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f3c716' }}>{num}</div>
-                  <div style={{ color: '#9CA3AF', fontSize: '0.9rem', marginTop: '0.5rem' }}>{isRtl ? labelAr : labelEn}</div>
+                  <Icon size={28} style={{ color: '#8DC63F', margin: '0 auto 0.75rem' }} />
+                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#8DC63F' }}>{num}</div>
+                  <div style={{ color: '#aaa', fontSize: '0.9rem', marginTop: '0.5rem' }}>{isRtl ? labelAr : labelEn}</div>
                 </div>
               ))}
             </div>
@@ -119,26 +119,26 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Mission & Vision */}
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#fff' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-              <div style={{ background: '#162534', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
-                <Target size={36} style={{ color: '#f3c716', marginBottom: '1.25rem' }} />
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '1rem' }}>
+              <div style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '2.5rem' }}>
+                <Target size={36} style={{ color: '#8DC63F', marginBottom: '1.25rem' }} />
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1a1a1a', marginBottom: '1rem' }}>
                   {isRtl ? 'رسالتنا' : 'Our Mission'}
                 </h3>
-                <p style={{ color: '#9CA3AF', lineHeight: 1.8 }}>
+                <p style={{ color: '#555', lineHeight: 1.8 }}>
                   {isRtl
                     ? 'أن نكون الشريك الاستراتيجي الأول لعملائنا في صناعة المعارض، من خلال تقديم حلول إبداعية ومبتكرة تعزز حضورهم في الأسواق المحلية والدولية وتحقق أهدافهم التسويقية.'
                     : 'To be the premier strategic partner for our clients in the exhibition industry, delivering creative and innovative solutions that strengthen their presence in local and international markets and achieve their marketing goals.'}
                 </p>
               </div>
-              <div style={{ background: '#162534', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
-                <Eye size={36} style={{ color: '#f3c716', marginBottom: '1.25rem' }} />
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '1rem' }}>
+              <div style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '2.5rem' }}>
+                <Eye size={36} style={{ color: '#8DC63F', marginBottom: '1.25rem' }} />
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1a1a1a', marginBottom: '1rem' }}>
                   {isRtl ? 'رؤيتنا' : 'Our Vision'}
                 </h3>
-                <p style={{ color: '#9CA3AF', lineHeight: 1.8 }}>
+                <p style={{ color: '#555', lineHeight: 1.8 }}>
                   {isRtl
                     ? 'أن نكون الشركة الرائدة في تصميم وتنفيذ أجنحة المعارض في منطقة الشرق الأوسط وشمال أفريقيا، مدفوعين بالابتكار والجودة والاستدامة، في خدمة رؤية المملكة 2030.'
                     : 'To be the leading company in exhibition stand design and fabrication in the Middle East and North Africa, driven by innovation, quality, and sustainability, in service of Saudi Vision 2030.'}
@@ -150,17 +150,17 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Values */}
-        <section className="section-padding" style={{ backgroundColor: '#0a1520' }}>
+        <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
           <div className="container-custom">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 className="section-title">{isRtl ? 'قيمنا' : 'Our Values'}</h2>
+              <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 800, color: '#1a1a1a' }}>{isRtl ? 'قيمنا' : 'Our Values'}</h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
               {values.map((v) => (
-                <div key={v.titleEn} className="card" style={{ padding: '2rem' }}>
+                <div key={v.titleEn} style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '2rem' }}>
                   <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{v.icon}</div>
-                  <h3 style={{ fontWeight: 700, color: '#F9FAFB', marginBottom: '0.75rem' }}>{isRtl ? v.titleAr : v.titleEn}</h3>
-                  <p style={{ color: '#9CA3AF', fontSize: '0.875rem', lineHeight: 1.7 }}>{isRtl ? v.descAr : v.descEn}</p>
+                  <h3 style={{ fontWeight: 700, color: '#1a1a1a', marginBottom: '0.75rem' }}>{isRtl ? v.titleAr : v.titleEn}</h3>
+                  <p style={{ color: '#555', fontSize: '0.875rem', lineHeight: 1.7 }}>{isRtl ? v.descAr : v.descEn}</p>
                 </div>
               ))}
             </div>
@@ -168,17 +168,17 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Team */}
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#fff' }}>
           <div className="container-custom">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 className="section-title">{isRtl ? 'فريقنا القيادي' : 'Our Leadership Team'}</h2>
+              <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 800, color: '#1a1a1a' }}>{isRtl ? 'فريقنا القيادي' : 'Our Leadership Team'}</h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1.5rem' }}>
               {team.map((m) => (
-                <div key={m.nameEn} className="card" style={{ padding: '2rem', textAlign: 'center' }}>
-                  <div style={{ width: 80, height: 80, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(243,199,22,0.2), rgba(243,199,22,0.05))', border: '2px solid rgba(243,199,22,0.3)', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>👤</div>
-                  <h3 style={{ fontWeight: 700, color: '#F9FAFB', fontSize: '1rem' }}>{isRtl ? m.nameAr : m.nameEn}</h3>
-                  <p style={{ color: '#f3c716', fontSize: '0.8rem', marginTop: '0.375rem' }}>{isRtl ? m.roleAr : m.roleEn}</p>
+                <div key={m.nameEn} style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '2rem', textAlign: 'center' }}>
+                  <div style={{ width: 80, height: 80, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(141,198,63,0.15), rgba(141,198,63,0.05))', border: '2px solid rgba(141,198,63,0.3)', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>👤</div>
+                  <h3 style={{ fontWeight: 700, color: '#1a1a1a', fontSize: '1rem' }}>{isRtl ? m.nameAr : m.nameEn}</h3>
+                  <p style={{ color: '#8DC63F', fontSize: '0.8rem', marginTop: '0.375rem' }}>{isRtl ? m.roleAr : m.roleEn}</p>
                 </div>
               ))}
             </div>

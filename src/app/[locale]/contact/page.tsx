@@ -32,34 +32,37 @@ export default async function ContactPage({ params }: Props) {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ background: 'linear-gradient(180deg, #0a1520 0%, #0f1e2d 100%)', paddingTop: '8rem', paddingBottom: '4rem' }}>
+        <section style={{ background: '#fff', paddingTop: '8rem', paddingBottom: '4rem', borderBottom: '1px solid #f0f0f0' }}>
           <div className="container-custom" style={{ textAlign: 'center' }}>
-            <h1 className="section-title" style={{ marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#8DC63F', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem' }}>
+              {isRtl ? 'تواصل معنا' : 'Get In Touch'}
+            </p>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', fontWeight: 900, color: '#1a1a1a', marginBottom: '1.25rem', lineHeight: 1.15 }}>
               {isRtl ? 'تواصل معنا' : 'Contact Us'}
             </h1>
-            <p className="section-subtitle">
+            <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
               {isRtl ? 'فريقنا جاهز لمساعدتك — احصل على استشارة مجانية وعرض سعر خلال 24 ساعة' : 'Our team is ready to help — get a free consultation and quote within 24 hours'}
             </p>
           </div>
         </section>
 
-        <section className="section-padding" style={{ backgroundColor: '#0f1e2d' }}>
+        <section className="section-padding" style={{ backgroundColor: '#f8f8f8' }}>
           <div className="container-custom">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '4rem' }}>
               {/* Contact info */}
               <div style={{ order: isRtl ? 2 : 1 }}>
-                <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '2rem' }}>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1a1a1a', marginBottom: '2rem' }}>
                   {isRtl ? 'معلومات التواصل' : 'Contact Information'}
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
                   {contactInfo.map(({ Icon, labelAr, labelEn, value, href }) => (
-                    <a key={labelEn} href={href} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', textDecoration: 'none', padding: '1.25rem', background: '#162534', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.06)', transition: 'border-color 0.2s' }}>
-                      <div style={{ width: 44, height: 44, borderRadius: '0.625rem', background: 'rgba(243,199,22,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                        <Icon size={20} style={{ color: '#f3c716' }} />
+                    <a key={labelEn} href={href} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', textDecoration: 'none', padding: '1.25rem', background: '#fff', borderRadius: '0.75rem', border: '1px solid #eee' }}>
+                      <div style={{ width: 44, height: 44, borderRadius: '0.625rem', background: 'rgba(141,198,63,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <Icon size={20} style={{ color: '#8DC63F' }} />
                       </div>
                       <div>
-                        <div style={{ fontSize: '0.8rem', color: '#6B7280', marginBottom: '0.25rem' }}>{isRtl ? labelAr : labelEn}</div>
-                        <div style={{ color: '#F9FAFB', fontWeight: 600, fontSize: '0.95rem' }}>{value}</div>
+                        <div style={{ fontSize: '0.8rem', color: '#aaa', marginBottom: '0.25rem' }}>{isRtl ? labelAr : labelEn}</div>
+                        <div style={{ color: '#1a1a1a', fontWeight: 600, fontSize: '0.95rem' }}>{value}</div>
                       </div>
                     </a>
                   ))}
@@ -74,7 +77,7 @@ export default async function ContactPage({ params }: Props) {
                     display: 'flex', alignItems: 'center', gap: '0.75rem',
                     padding: '1rem 1.5rem',
                     background: '#25D366', color: '#fff',
-                    borderRadius: '0.625rem', fontWeight: 700,
+                    borderRadius: '0.75rem', fontWeight: 700,
                     textDecoration: 'none', fontSize: '1rem',
                   }}
                 >
@@ -85,44 +88,44 @@ export default async function ContactPage({ params }: Props) {
 
               {/* Form */}
               <div style={{ order: isRtl ? 1 : 2 }}>
-                <div style={{ background: '#162534', border: '1px solid rgba(243,199,22,0.15)', borderRadius: '1.25rem', padding: '2.5rem' }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F9FAFB', marginBottom: '2rem' }}>
+                <div style={{ background: '#fff', border: '1px solid #eee', borderRadius: '1rem', padding: '2.5rem' }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1a1a1a', marginBottom: '2rem' }}>
                     {isRtl ? 'أرسل رسالتك' : 'Send Your Message'}
                   </h2>
                   <form style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                       <div>
-                        <label style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
+                        <label style={{ display: 'block', color: '#555', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
                           {isRtl ? 'الاسم الكامل' : 'Full Name'} *
                         </label>
-                        <input type="text" placeholder={isRtl ? 'أدخل اسمك' : 'Enter your name'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#1e3347', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.5rem', color: '#F9FAFB', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
+                        <input type="text" placeholder={isRtl ? 'أدخل اسمك' : 'Enter your name'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#fff', border: '1px solid #ddd', borderRadius: '0.5rem', color: '#1a1a1a', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
                       </div>
                       <div>
-                        <label style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
+                        <label style={{ display: 'block', color: '#555', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
                           {isRtl ? 'اسم الشركة' : 'Company Name'}
                         </label>
-                        <input type="text" placeholder={isRtl ? 'شركتك' : 'Your company'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#1e3347', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.5rem', color: '#F9FAFB', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
+                        <input type="text" placeholder={isRtl ? 'شركتك' : 'Your company'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#fff', border: '1px solid #ddd', borderRadius: '0.5rem', color: '#1a1a1a', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
                       </div>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                       <div>
-                        <label style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
+                        <label style={{ display: 'block', color: '#555', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
                           {isRtl ? 'البريد الإلكتروني' : 'Email'} *
                         </label>
-                        <input type="email" placeholder={isRtl ? 'بريدك@مثال.com' : 'you@example.com'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#1e3347', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.5rem', color: '#F9FAFB', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
+                        <input type="email" placeholder={isRtl ? 'بريدك@مثال.com' : 'you@example.com'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#fff', border: '1px solid #ddd', borderRadius: '0.5rem', color: '#1a1a1a', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
                       </div>
                       <div>
-                        <label style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
+                        <label style={{ display: 'block', color: '#555', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
                           {isRtl ? 'رقم الهاتف' : 'Phone'} *
                         </label>
-                        <input type="tel" placeholder="+966 5X XXX XXXX" style={{ width: '100%', padding: '0.75rem 1rem', background: '#1e3347', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.5rem', color: '#F9FAFB', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
+                        <input type="tel" placeholder="+966 5X XXX XXXX" style={{ width: '100%', padding: '0.75rem 1rem', background: '#fff', border: '1px solid #ddd', borderRadius: '0.5rem', color: '#1a1a1a', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }} />
                       </div>
                     </div>
                     <div>
-                      <label style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
+                      <label style={{ display: 'block', color: '#555', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
                         {isRtl ? 'الخدمة المطلوبة' : 'Service Required'}
                       </label>
-                      <select style={{ width: '100%', padding: '0.75rem 1rem', background: '#1e3347', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.5rem', color: '#F9FAFB', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }}>
+                      <select style={{ width: '100%', padding: '0.75rem 1rem', background: '#fff', border: '1px solid #ddd', borderRadius: '0.5rem', color: '#1a1a1a', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box' }}>
                         <option value="">{isRtl ? 'اختر الخدمة' : 'Select service'}</option>
                         <option>{isRtl ? 'تصميم جناح المعرض' : 'Exhibition Stand Design'}</option>
                         <option>{isRtl ? 'الأجنحة المخصصة' : 'Custom Booths'}</option>
@@ -134,17 +137,16 @@ export default async function ContactPage({ params }: Props) {
                       </select>
                     </div>
                     <div>
-                      <label style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
+                      <label style={{ display: 'block', color: '#555', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 600 }}>
                         {isRtl ? 'رسالتك' : 'Your Message'}
                       </label>
-                      <textarea rows={5} placeholder={isRtl ? 'أخبرنا عن مشروعك...' : 'Tell us about your project...'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#1e3347', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.5rem', color: '#F9FAFB', fontSize: '0.9rem', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }} />
+                      <textarea rows={5} placeholder={isRtl ? 'أخبرنا عن مشروعك...' : 'Tell us about your project...'} style={{ width: '100%', padding: '0.75rem 1rem', background: '#fff', border: '1px solid #ddd', borderRadius: '0.5rem', color: '#1a1a1a', fontSize: '0.9rem', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }} />
                     </div>
                     <button type="submit" style={{
                       padding: '1rem 2rem',
-                      background: 'linear-gradient(135deg, #f3c716, #d4a800)',
-                      color: '#0f1e2d', fontWeight: 800, fontSize: '1rem',
-                      borderRadius: '0.625rem', border: 'none', cursor: 'pointer',
-                      transition: 'all 0.3s',
+                      background: '#8DC63F',
+                      color: '#fff', fontWeight: 800, fontSize: '1rem',
+                      borderRadius: '0.75rem', border: 'none', cursor: 'pointer',
                     }}>
                       {isRtl ? 'إرسال الطلب' : 'Send Request'}
                     </button>
