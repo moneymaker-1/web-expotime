@@ -5,6 +5,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ['sanity', '@sanity/client', 'next-sanity', '@sanity/vision'],
+  transpilePackages: ['three', '@react-three/fiber', '@react-three/drei', '@react-three/postprocessing'],
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // Don't bundle Sanity on the client — it loads itself in the browser at runtime
