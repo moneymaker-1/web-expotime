@@ -41,7 +41,7 @@ export default function Header() {
     <>
       <header style={{
         position: 'fixed', top: 0, left: 44, right: 0, zIndex: 800,
-        backgroundColor: scrolled ? '#111111' : 'transparent',
+        backgroundColor: scrolled ? '#0a0a0a' : 'transparent',
         borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
         transition: 'background-color 0.4s, border-color 0.4s',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
@@ -81,7 +81,7 @@ export default function Header() {
 
             {/* CTA pill */}
             <Link href={`/${locale}/contact`} className="nav-desktop" style={{
-              padding: '0.6rem 1.5rem', background: '#8DC63F', color: '#fff',
+              padding: '0.6rem 1.5rem', background: '#8DC63F', color: '#0a0a0a',
               borderRadius: '3rem', fontWeight: 700, fontSize: '0.875rem',
               textDecoration: 'none', transition: 'all 0.3s',
             }}
@@ -105,7 +105,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div style={{ background: '#111111', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '1rem', maxHeight: '80vh', overflowY: 'auto' }} className="nav-mobile">
+          <div style={{ background: '#0a0a0a', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '1rem', maxHeight: '80vh', overflowY: 'auto' }} className="nav-mobile">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} style={{
                 display: 'block', padding: '0.875rem 1rem',
@@ -119,7 +119,7 @@ export default function Header() {
             <div style={{ paddingTop: '1rem' }}>
               <Link href={`/${locale}/contact`} style={{
                 display: 'block', padding: '0.875rem', textAlign: 'center',
-                background: '#8DC63F', color: '#fff', borderRadius: '0.5rem',
+                background: '#8DC63F', color: '#0a0a0a', borderRadius: '0.5rem',
                 fontWeight: 700, textDecoration: 'none', fontSize: '0.9rem',
               }}>
                 {isRtl ? 'تواصل معنا' : 'Contact Us'}

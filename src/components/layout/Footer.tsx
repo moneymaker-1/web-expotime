@@ -29,7 +29,7 @@ export default function Footer() {
   const linkStyle = { color: '#555', textDecoration: 'none', fontSize: '0.875rem', lineHeight: 1.7, transition: 'color 0.2s' };
 
   return (
-    <footer style={{ backgroundColor: '#111111', marginLeft: 44 }} dir={isRtl ? 'rtl' : 'ltr'}>
+    <footer style={{ backgroundColor: '#0a0a0a', marginLeft: 44 }} dir={isRtl ? 'rtl' : 'ltr'}>
       {/* Big "Let's Talk" section */}
       <div style={{ padding: '5rem 4rem 4rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
