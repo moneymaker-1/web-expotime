@@ -18,9 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function GoogleAdsLanding({ params }: Props) {
   const { locale } = await params;
   const ar = locale === 'ar';
-  const whatsapp = 'https://wa.me/966?text=' + encodeURIComponent(ar
-    ? 'مرحباً إكسبو تايم، أحتاج عرض سعر لجناح معرض. اسم المعرض: ___، المدينة: ___، المساحة: ___، تاريخ المعرض: ___.'
-    : 'Hello Expo Time, I need a quotation for an exhibition stand. Exhibition: ___, City: ___, Stand size: ___, Event date: ___.');
+  const message = ar
+    ? 'مرحباً إكسبو تايم، أحتاج عرض سعر لجناح معرض. اسم الشركة: ___، اسم المعرض: ___، المدينة: ___، المساحة: ___ م²، تاريخ المعرض: ___.'
+    : 'Hello Expo Time, I need a quotation for an exhibition stand. Company: ___, Exhibition: ___, City: ___, Stand size: ___ sqm, Event date: ___.';
+  const whatsapp = 'https://wa.me/966112393255?text=' + encodeURIComponent(message);
+  const email = 'mailto:info@expo-time.co?subject=' + encodeURIComponent(ar ? 'طلب عرض سعر جناح معرض' : 'Exhibition stand quotation request') + '&body=' + encodeURIComponent(message);
 
   return (
     <main dir={ar ? 'rtl' : 'ltr'} className="min-h-screen bg-black text-white">
@@ -35,8 +37,11 @@ export default async function GoogleAdsLanding({ params }: Props) {
             : 'Design, fabrication, project management and on-site execution through one accountable team across Riyadh, Jeddah and the Eastern Province.'}
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <a data-conversion="whatsapp_quote" href={whatsapp} className="rounded-full bg-white px-7 py-4 font-medium text-black">
+          <a data-conversion="whatsapp_quote" href={whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-7 py-4 font-medium text-black">
             {ar ? 'اطلب عرض سعر عبر واتساب' : 'Get a quote on WhatsApp'}
+          </a>
+          <a data-conversion="email_quote" href={email} className="rounded-full border border-white/25 px-7 py-4 font-medium">
+            {ar ? 'أرسل الطلب بالبريد' : 'Request by email'}
           </a>
           <Link href={`/${locale}/portfolio`} className="rounded-full border border-white/25 px-7 py-4 font-medium">
             {ar ? 'شاهد أعمالنا' : 'View our work'}
@@ -56,9 +61,9 @@ export default async function GoogleAdsLanding({ params }: Props) {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-semibold md:text-5xl">{ar ? 'أرسل 4 معلومات. نبدأ من هنا.' : 'Send four details. We start from there.'}</h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-4">
-          {(ar ? ['اسم المعرض','المدينة','مساحة الجناح','تاريخ المعرض'] : ['Exhibition','City','Stand size','Event date']).map((x,i) =>
+        <h2 className="text-3xl font-semibold md:text-5xl">{ar ? 'أرسل 5 معلومات. نبدأ من هنا.' : 'Send five details. We start from there.'}</h2>
+        <div className="mt-10 grid gap-4 md:grid-cols-5">
+          {(ar ? ['اسم الشركة','اسم المعرض','المدينة','مساحة الجناح','تاريخ المعرض'] : ['Company','Exhibition','City','Stand size','Event date']).map((x,i) =>
             <div key={x} className="rounded-2xl border border-white/10 p-6"><span className="text-sm text-white/40">0{i+1}</span><p className="mt-8 text-xl">{x}</p></div>
           )}
         </div>
@@ -68,7 +73,7 @@ export default async function GoogleAdsLanding({ params }: Props) {
               ? 'قبل المعرض لا تحتاج مورّدين متفرقين. تحتاج جهة تعرف الموعد، اللوائح، التنفيذ، وما الذي يقلقك قبل الافتتاح.'
               : 'Before show day, you do not need fragmented suppliers. You need one team that understands the deadline, venue rules, execution and what can go wrong before opening.'}
           </p>
-          <a data-conversion="whatsapp_quote_bottom" href={whatsapp} className="mt-8 inline-block rounded-full bg-white px-7 py-4 font-medium text-black">
+          <a data-conversion="whatsapp_quote_bottom" href={whatsapp} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-full bg-white px-7 py-4 font-medium text-black">
             {ar ? 'ابدأ طلبك الآن' : 'Start your request'}
           </a>
         </div>
